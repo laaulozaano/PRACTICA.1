@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -22,15 +22,73 @@
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body>
   <header>
-    
+    <nav class="navbar navbar-expand-lg py-3">
+  <!-- Logo -->
+  <a class="navbar-brand" href="#">
+    <img src="media/img/logo_aeron.svg" alt="Logo">
+  </a>
+
+  <!-- Botón responsive -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Enlaces -->
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link active" href="#">home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">products</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Carrito -->
+  <div class="d-flex">
+    <a href="#" class="nav-link">
+      <i class="bi bi-cart3"></i>
+    </a>
+  </div>
+</nav>
   </header>
 
   <main>
-    HOLLLAAAAA QUE TAL? AERON
+   <section class="hero">
+  <img src="media/img/logo_aeron.svg" alt="Logo gigante" class="hero-logo">
+  <img src="media/img/aeronhead.png" alt="Aeronhead" class="hero-product">
+  <span class="scroll-down">scroll down</span>
+</section>
+
+<section class="product-colors py-5">
+  <div class="container">
+    <!-- Título y selector de colores -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="m-0">Elige tu color</h2>
+      <div class="color-selector">
+        <button class="color-btn" data-img1="media/img/prod1-red.jpg" data-img2="media/img/prod2-red.jpg" style="background-color: #FF0000;"></button>
+        <button class="color-btn" data-img1="media/img/prod1-blue.jpg" data-img2="media/img/prod2-blue.jpg" style="background-color: #0000FF;"></button>
+        <button class="color-btn" data-img1="media/img/prod1-green.jpg" data-img2="media/img/prod2-green.jpg" style="background-color: #00FF00;"></button>
+      </div>
+    </div>
+
+    <!-- Imágenes del producto -->
+    <div class="row g-3">
+      <div class="col-md-4">
+        <img src="media/img/chica_amarillo.png" alt="Chica amarillo" class="img-fluid color-img-1">
+      </div>
+      <div class="col-md-8">
+        <img src="media/img/chica_amarillo2.png" alt="Chica amarillo 2" class="img-fluid color-img-2">
+      </div>
+    </div>
+  </div>
+</section>
+
   </main>
 
   <footer>

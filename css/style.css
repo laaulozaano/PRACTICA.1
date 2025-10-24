@@ -47,7 +47,129 @@
   font-style: normal;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Geist', sans-serif;
   font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+
+.navbar {
+  padding-left: 20px;  
+  padding-right: 20px;
+}
+
+
+.navbar-nav .nav-link {
+  font-family: 'Geist', sans-serif;
+  font-weight: 500;
+  color: rgba(0,0,0,0.3);
+  margin: 0 15px;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link.active {
+  color: rgba(0,0,0,1);
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 7px;
+  left: 0;
+  background-color: #000;
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Carrito siempre opaco y sin underline */
+.d-flex a.nav-link {
+  color: #000;
+  font-weight: normal;
+  position: static;   /* para que no use ::after */
+}
+
+.d-flex a.nav-link:hover::after {
+  width: 0;           /* no aparece línea */
+}
+
+.navbar-brand img {
+  height: 15px;
+}
+
+.navbar .bi-cart3 {
+  font-size: 18px; 
+}
+
+.hero {
+  position: relative;
+  height: 90vh;      
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* centrado */
+  width: calc(100% - 30px);          /* ancho total menos márgenes */
+  z-index: 1;
+}
+
+.hero-product {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;         
+  max-width: 45vw; 
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;         
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1em;
+  cursor: default;
+  animation: bounce 1.5s infinite;  
+}
+
+.color-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color-btn:hover {
+  transform: scale(1.2);
+}
+
+.color-btn.active {
+  outline: 3px solid #000;
+}
+
+/* Animación tipo “bounce” */
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-8px); }
 }
