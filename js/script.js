@@ -22,13 +22,18 @@ $(document).ready(function(){
 
 // --------SLIDER---------
 
-// const bestSellersSwiper = new Swiper('.best-sellers-swiper', {
-//   slidesPerView: 'auto', 
-//   spaceBetween: 15,      
-//   loop: true,
-//   grabCursor: true,      
-//   centeredSlides: false, 
-// });
+document.addEventListener("DOMContentLoaded", function() {
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",  // ancho de cada slide según CSS
+    spaceBetween: 20,
+    freeMode: true,          // permite drag natural
+    grabCursor: true,
+    loop: false,             // sin loop
+    autoplay: false,
+    centeredSlides: false,
+    watchOverflow: true
+  });
+});
 
 
 

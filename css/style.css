@@ -198,67 +198,110 @@ body {
 
 /* ------SLIDER-------- */
 
-/* .best-sellers .swiper {
-  padding-bottom: 20px; 
+.best-sellers {
+  height: 100vh;             /* sección entera ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-.best-sellers .product-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  cursor: grab;
-  height: 180px;  
-  width: 140px;  
-}
-
-.best-sellers .product-card img {
+.container-custom {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.best-sellers .product-info {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
+.section-title {
+  margin-top: 3rem;
+}
+
+.swiper {
+  height: 66vh;              /* 2/3 del viewport */
+  overflow: visible;
+}
+
+.swiper-wrapper {
+  display: flex;             /* fila de slides */
+}
+
+.swiper-slide {
+  flex: 0 0 calc((100% - 40px) / 3); 
+  margin-right: 20px;      
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  height: 100%;
+}
+
+.product-info {
   display: flex;
   justify-content: space-between;
-  font-size: 0.8rem;
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-} */
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
 
+.product-price {
+  font-weight: 400;
+}
 
+.product-card img {
+  width: 100%;
+  height: calc(100% - 30px);
+  object-fit: cover;
+}
 
 
 
 /* -----------OUR STORY--------------- */
 
 .our-story {
-  height: 100vh; 
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.our-story .col-md-6 {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .our-story video {
-  height: 100%;
-  object-fit: cover; 
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+  right: 0;
 }
 
 .p-5 {
-    padding: 1.5rem !important;
+  padding: 1rem !important;
+  position: relative;
+  z-index: 1;
 }
 
 .story-title {
-  font-family: 'Geist', sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: -0.03em;
-  padding-bottom: 36vh;
-}
+  padding-top: 3rem;}
 
 .story-img {
-  width: 71vh;
-  padding-bottom: 28vh;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5vh;
 }
 
 .story-text {
@@ -266,4 +309,6 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
+  max-width: 100%;
 }
+
