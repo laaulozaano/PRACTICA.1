@@ -60,7 +60,7 @@ body {
   letter-spacing: -0.03em;
 }
 
-
+/* ----------NAVBAR --------- */
 .navbar {
   padding-left: 20px;  
   padding-right: 20px;
@@ -96,15 +96,15 @@ body {
   width: 100%;
 }
 
-/* Carrito siempre opaco y sin underline */
+/* ----Carrito---- */
 .d-flex a.nav-link {
   color: #000;
   font-weight: normal;
-  position: static;   /* para que no use ::after */
+  position: static;   
 }
 
 .d-flex a.nav-link:hover::after {
-  width: 0;           /* no aparece línea */
+  width: 0;         
 }
 
 .navbar-brand img {
@@ -115,6 +115,7 @@ body {
   font-size: 18px; 
 }
 
+/* -----------HERO------------- */
 .hero {
   position: relative;
   height: 90vh;      
@@ -126,8 +127,8 @@ body {
   position: absolute;
   top: 45%;
   left: 50%;
-  transform: translate(-50%, -50%);  /* centrado */
-  width: calc(100% - 30px);          /* ancho total menos márgenes */
+  transform: translate(-50%, -50%);  
+  width: calc(100% - 30px);          
   z-index: 1;
 }
 
@@ -150,14 +151,25 @@ body {
   animation: bounce 1.5s infinite;  
 }
 
+/* Animación tipo “bounce” scroll down */
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+.container-aeronhead3002x{
+  padding-left: 20px;  
+  padding-right: 20px;
+}
+
 .color-btn {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 2px solid #000;
   margin-left: 10px;
   cursor: pointer;
   transition: transform 0.2s;
+  border: none
 }
 
 .color-btn:hover {
@@ -168,8 +180,90 @@ body {
   outline: 3px solid #000;
 }
 
-/* Animación tipo “bounce” */
-@keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-8px); }
+.product-images {
+  padding-left: 40px;  
+  padding-right: 40px;
+  height: 100vh; 
+}
+
+.img-equal {
+  max-width: 117%;
+  max-height: 75%;
+  object-fit: contain;
+}
+
+.mb-4 {
+    margin-bottom: -5.5rem !important;
+}
+
+/* ------SLIDER-------- */
+
+/* .best-sellers .swiper {
+  padding-bottom: 20px; 
+}
+
+.best-sellers .product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: grab;
+  height: 180px;  
+  width: 140px;  
+}
+
+.best-sellers .product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.best-sellers .product-info {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+} */
+
+
+
+
+
+/* -----------OUR STORY--------------- */
+
+.our-story {
+  height: 100vh; 
+}
+
+.our-story video {
+  height: 100%;
+  object-fit: cover; 
+}
+
+.p-5 {
+    padding: 1.5rem !important;
+}
+
+.story-title {
+  font-family: 'Geist', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  padding-bottom: 36vh;
+}
+
+.story-img {
+  width: 71vh;
+  padding-bottom: 28vh;
+}
+
+.story-text {
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
 }

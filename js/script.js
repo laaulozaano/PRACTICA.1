@@ -15,3 +15,20 @@ $(document).ready(function(){
     $('.color-img-2').attr('src', img2);
   });
 });
+
+
+
+
+
+// --------SLIDER---------
+
+// const bestSellersSwiper = new Swiper('.best-sellers-swiper', {
+//   slidesPerView: 'auto', 
+//   spaceBetween: 15,      
+//   loop: true,
+//   grabCursor: true,      
+//   centeredSlides: false, 
+// });
+
+
+
