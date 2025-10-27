@@ -37,3 +37,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+$(document).ready(function() {
+  $('#newsletterForm').on('submit', function(e) {
+    e.preventDefault();
+    const email = $('#email').val().trim();
+
+    if (email === '' || !email.includes('@')) {
+      $('#subscribeMessage')
+        .text('Please enter a valid email.')
+        .css('color', 'red')
+        .fadeIn();
+    } else {
+      $('#subscribeMessage')
+        .text('Subscribed successfully!')
+        .css('color', 'green')
+        .fadeIn();
+
+      $('#newsletterForm')[0].reset();
+    }
+  });
+});
