@@ -166,11 +166,9 @@ body {
 
 
 
-/* -------IMAGENES BOTONES------ */
-
-
+/* -------IMÁGENES BOTONES------ */
 .container-aeronhead3002x {
-  padding: 40px 20px;
+  padding: 3rem 20px;
 }
 
 .color-btn {
@@ -180,67 +178,32 @@ body {
   margin-left: 10px;
   cursor: pointer;
   transition: transform 0.2s, outline 0.2s;
-  border: none;
+  border: 0.5px solid #000;
 }
 
 .color-btn:hover {
   transform: scale(1.2);
 }
 
-.color-btn.active {
-  outline: 3px solid #000;
-}
 
 /* SECCIÓN DE IMÁGENES */
 .product-images {
   margin-top: 60px;
-  /* separa de título y botones */
   height: auto;
-  /* ya no forzamos 100vh */
 }
 
-.same-height-row {
-  display: flex;
-  align-items: stretch;
+/* Wrapper interno para que la imagen ocupe todo el alto de la columna */
+.image-wrapper {
+  height: 85vh; /* ajusta la altura deseada */
 }
 
-.same-height-row>div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* IMÁGENES */
-.img-responsive {
+/* Imagen que ocupa todo el contenedor y se recorta si es necesario */
+.image-wrapper img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  max-height: 85vh;
-  transition: opacity 0.3s ease;
-}
-
-.aeronhead-section {
-  margin-top: 100px;
-}
-
-.image-row {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
-
-.fade-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  transition: opacity 0.8s ease-in-out;
-  opacity: 1;
-}
-
-.fade-out {
-  opacity: 0;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.25s ease-in-out; /* coincide con JS */
 }
 
 
@@ -348,21 +311,10 @@ body {
 .our-story .col-md-6 {
   width: 50%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.our-story video {
-  position: absolute;
-  width: 50%;
-  height: 100vh;
-  object-fit: cover;
-  right: 0;
 }
 
 .p-5 {
-  padding: 1rem !important;
+  padding: 0px 20px !important;
   position: relative;
   z-index: 1;
 }
@@ -377,37 +329,33 @@ body {
   margin-bottom: 5vh;
 }
 
+.our-story .gif-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center; 
+}
+.our-story .gif-wrap .gif {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 
 
 
 /* ---------NEWSLETTER----------- */
 
 .newsletter-section {
-  min-height: 50vh;
+  height: 50vh;               /* altura total de la sección */
   display: flex;
-  margin-inline: 2vw;
-  padding-block: 6vh;
+  margin: 3rem 20px;
+  padding-block: 0;           /* padding reducido para que ocupe toda la altura */
 }
 
-.newsletter-image img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  border-radius: 0;
-}
-
-.newsletter-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  height: 100%;
-  padding: 5%;
-}
 
 .newsletter-form-wrapper {
   width: 100%;
-  margin-top: 4.3rem;
 }
 
 .newsletter-input {
@@ -430,34 +378,23 @@ body {
 }
 
 .btn-subscribe:hover {
-  background-color: #333;
+  background-color: #F1EA92;
+  border: 0.01rem solid #000;
 }
 
 .subscribe-message {
-  font-size: 0.95rem;
   color: black;
   display: block;
   visibility: hidden;
-  height: 4rem;
 }
 
 .subscribe-message.visible {
   visibility: visible;
 }
 
-.p-5 {
-  position: relative;
-  z-index: 1;
-  padding-left: 1rem !important;
-  padding-right: 0rem !important;
-  padding-top: 0rem !important;
-  padding-bottom: 0rem !important;
-}
-
 .mb-3 {
   margin-bottom: 0.5rem !important;
 }
-
 
 
 /* ----------FOOTER------------- */
@@ -475,6 +412,7 @@ body {
   justify-content: space-between;
   /* distribuye todo verticalmente */
   height: 100%;
+  max-width: 100%;
 }
 
 .footer-logo {
@@ -497,11 +435,12 @@ body {
 }
 
 .footer-links a {
-  font-family: 'Geist', sans-serif;
   color: #000;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 300;
   margin: 5px 0;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .footer-links a:hover {
