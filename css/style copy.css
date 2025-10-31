@@ -1,0 +1,551 @@
+@font-face {
+  font-family: 'Geist';
+  src: url('../fonts/Geist-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../fonts/Geist-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../fonts/Geist-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../fonts/Geist-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../fonts/Geist-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../fonts/Geist-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../fonts/Geist-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+/* ----------NAVBAR --------- */
+.navbar {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.navbar-nav .nav-link {
+  font-family: 'Geist', sans-serif;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.3);
+  margin: 0 15px;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link.active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 7px;
+  left: 0;
+  background-color: #000;
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* ----Carrito---- */
+.d-flex a.nav-link {
+  color: #000;
+  font-weight: normal;
+  position: static;
+}
+
+.d-flex a.nav-link:hover::after {
+  width: 0;
+}
+
+.navbar-brand img {
+  height: 15px;
+}
+
+.navbar .bi-cart3 {
+  font-size: 18px;
+}
+
+/* -----------HERO------------- */
+.hero {
+  position: relative;
+  height: 90vh;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 30px);
+  z-index: 1;
+}
+
+.hero-product {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 45vw;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1em;
+  cursor: default;
+  animation: bounce 1.5s infinite;
+}
+
+/* Animación tipo “bounce” scroll down */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+}
+
+
+
+/* -------IMÁGENES BOTONES------ */
+.container-aeronhead3002x {
+  padding: 3rem 20px;
+}
+
+.color-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, outline 0.2s;
+  border: 0.5px solid #000;
+}
+
+.color-btn:hover {
+  transform: scale(1.2);
+}
+
+
+/* SECCIÓN DE IMÁGENES */
+.product-images {
+  margin-top: 60px;
+  height: auto;
+}
+
+/* Wrapper interno para que la imagen ocupe todo el alto de la columna */
+.image-wrapper {
+  height: 85vh; /* ajusta la altura deseada */
+}
+
+/* Imagen que ocupa todo el contenedor y se recorta si es necesario */
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.25s ease-in-out; /* coincide con JS */
+}
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .same-height-row {
+    flex-direction: column;
+  }
+
+  .img-responsive {
+    max-height: 60vh;
+    margin-bottom: 20px;
+  }
+
+  .fade-image {
+    max-width: 90%;
+  }
+}
+
+
+
+
+/* ------SLIDER-------- */
+
+.best-sellers {
+  height: 100vh;
+  /* sección entera ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.container-custom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-title {
+  margin-top: 3rem;
+}
+
+.swiper {
+  height: 66vh;
+  /* 2/3 del viewport */
+  overflow: visible;
+}
+
+.swiper-wrapper {
+  display: flex;
+  /* fila de slides */
+}
+
+.swiper-slide {
+  flex: 0 0 calc((100% - 40px) / 3);
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  height: 100%;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.product-price {
+  font-weight: 400;
+}
+
+.product-card img {
+  width: 100%;
+  height: calc(100% - 30px);
+  object-fit: cover;
+}
+
+
+
+/* -----------OUR STORY--------------- */
+
+.our-story {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.our-story .col-md-6 {
+  width: 50%;
+  height: 100vh;
+}
+
+.p-5 {
+  padding: 0px 20px !important;
+  position: relative;
+  z-index: 1;
+}
+
+.story-title {
+  padding-top: 3rem;
+}
+
+.story-img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5vh;
+}
+
+.our-story .gif-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center; 
+}
+.our-story .gif-wrap .gif {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+
+
+/* ---------NEWSLETTER----------- */
+
+.newsletter-section {
+  height: 50vh;               /* altura total de la sección */
+  display: flex;
+  margin: 3rem 20px;
+  padding-block: 0;           /* padding reducido para que ocupe toda la altura */
+}
+
+
+.newsletter-form-wrapper {
+  width: 100%;
+}
+
+.newsletter-input {
+  border: 0.01rem solid #000;
+  border-radius: 0;
+  padding-block: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-subscribe {
+  background-color: #000;
+  color: #fff;
+  border-radius: 0;
+  padding-block: 0.7rem;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  width: 100%;
+}
+
+.btn-subscribe:hover {
+  background-color: #F1EA92;
+  border: 0.01rem solid #000;
+}
+
+.subscribe-message {
+  color: black;
+  display: block;
+  visibility: hidden;
+}
+
+.subscribe-message.visible {
+  visibility: visible;
+}
+
+.mb-3 {
+  margin-bottom: 0.5rem !important;
+}
+
+.newsletter-section .h-100 {
+  height: auto !important;
+}
+
+
+/* ----------FOOTER------------- */
+
+.footer {
+  background-color: #fff;
+  color: #000;
+  min-height: 85vh;
+  padding: 3rem 0;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* distribuye todo verticalmente */
+  height: 100%;
+  max-width: 100%;
+}
+
+.footer-logo {
+  width: calc(100% - 20px);
+}
+
+.footer-slogan {
+  text-align: center;
+  font-weight: 400;
+}
+
+.footer-social i {
+  font-size: 1.5rem;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.footer-social:hover i {
+  color: #555;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 300;
+  margin: 5px 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.scroll-top i {
+  font-size: 2rem;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.scroll-top:hover i {
+  color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------SHOP PAGE---------- */
+
+/* Filters y búsqueda */
+.filter-toggle {
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.filter-toggle i {
+  font-size: 1.2rem;
+}
+
+.search-bar {
+  max-width: 300px;
+  width: 100%;
+}
+
+.search-input {
+  border-radius: 0;
+  padding-right: 2rem;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+/* Product cards */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+  padding: 0 5px;
+}
+
+.product-name {
+  font-size: 1rem;
+}
+
+.product-price {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.product-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
