@@ -396,13 +396,17 @@ body {
   margin-bottom: 0.5rem !important;
 }
 
+.newsletter-section .h-100 {
+  height: auto !important;
+}
+
 
 /* ----------FOOTER------------- */
 
 .footer {
   background-color: #fff;
   color: #000;
-  height: 85vh;
+  min-height: 85vh;
   padding: 3rem 0;
 }
 
