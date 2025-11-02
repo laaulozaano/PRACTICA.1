@@ -70,7 +70,7 @@
 
     <!-- Filtros + búsqueda -->
     <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
-      <div class="d-flex align-items-center filter-toggle">
+      <div class="d-flex align-items-center filter-toggle" data-bs-toggle="offcanvas" data-bs-target="#filterPanel" aria-controls="filterPanel">
         <i class="bi bi-funnel me-2"></i>
         <span>filters</span>
       </div>
@@ -81,165 +81,248 @@
       </div>
     </div>
 
-    <!-- Grid de productos -->
-    <div class="row g-4">
-      <!-- Producto 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 1</span>
-            <span class="product-price">$199</span>
-          </div>
-          <img src="media/img/aeronhead_fondo.png" alt="Product 1">
-        </div>
-      </div>
+   <!-- Grid de productos -->
+<div class="row g-4" id="productGrid">
 
-      <!-- Producto 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 2</span>
-            <span class="product-price">$249</span>
-          </div>
-          <img src="media/img/aeronbuds.png" alt="Product 2">
-        </div>
+  <!-- Producto 1 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="headphones" data-price="high" data-tech="bluetooth wireless rechargeable">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeronhead 3002X</span>
+        <span class="product-price">$400</span>
       </div>
+      <img src="media/img/aeronhead_fondo.png" alt="Product 1">
+    </div>
+  </div>
 
-      <!-- Producto 3 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 3</span>
-            <span class="product-price">$179</span>
-          </div>
-          <img src="media/img/aeronwalk.png" alt="Product 3">
-        </div>
+  <!-- Producto 2 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="earbuds" data-price="mid" data-tech="bluetooth rechargeable">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeronbuds 1200F</span>
+        <span class="product-price">$279</span>
       </div>
+      <img src="media/img/aeronbuds.png" alt="Product 2">
+    </div>
+  </div>
 
-      <!-- Producto 4 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 4</span>
-            <span class="product-price">$220</span>
-          </div>
-          <img src="media/img/aeronsound.png" alt="Product 4">
-        </div>
+  <!-- Producto 3 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="player" data-price="low" data-tech="usb-c">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeronwalk TP-7</span>
+        <span class="product-price">$179</span>
       </div>
+      <img src="media/img/aeronwalk.png" alt="Product 3">
+    </div>
+  </div>
 
-      <!-- Producto 5 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 5</span>
-            <span class="product-price">$210</span>
-          </div>
-          <img src="media/img/aeronhead2.png" alt="Product 5">
-        </div>
+  <!-- Producto 4 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="player" data-price="high" data-tech="bluetooth wireless rechargeable">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeronsound 333Z</span>
+        <span class="product-price">$320</span>
       </div>
+      <img src="media/img/aeronsound.png" alt="Product 4">
+    </div>
+  </div>
 
-      <!-- Producto 6 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 6</span>
-            <span class="product-price">$195</span>
-          </div>
-          <img src="media/img/aeronbox.png" alt="Product 6">
-        </div>
+  <!-- Producto 5 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="headphones" data-price="mid" data-tech="usb-c">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeronhead 240V</span>
+        <span class="product-price">$210</span>
       </div>
+      <img src="media/img/aeronhead2.png" alt="Product 5">
+    </div>
+  </div>
 
-      <!-- Producto 7 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 7</span>
-            <span class="product-price">$230</span>
-          </div>
-          <img src="media/img/aeronnyl.png" alt="Product 7">
-        </div>
+  <!-- Producto 6 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="player" data-price="high" data-tech="usb-c bluetooth rechargeable">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeronbox TX-6</span>
+        <span class="product-price">$295</span>
       </div>
+      <img src="media/img/aeronbox.png" alt="Product 6">
+    </div>
+  </div>
 
-      <!-- Producto 8 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 8</span>
-            <span class="product-price">$185</span>
-          </div>
-          <img src="media/img/aeronkey.png" alt="Product 8">
-        </div>
+  <!-- Producto 7 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="player" data-price="high" data-tech="usb-c bluetooth">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeronnyl F500</span>
+        <span class="product-price">$495</span>
       </div>
+      <img src="media/img/aeronnyl.png" alt="Product 7">
+    </div>
+  </div>
 
-      <!-- Producto 9 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 9</span>
-            <span class="product-price">$200</span>
-          </div>
-          <img src="media/img/aerondisc.png" alt="Product 9">
-        </div>
+  <!-- Producto 8 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="keyboard" data-price="mid" data-tech="bluetooth wireless">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeronkey XYZ</span>
+        <span class="product-price">$285</span>
       </div>
+      <img src="media/img/aeronkey.png" alt="Product 8">
+    </div>
+  </div>
 
-      <!-- Producto 10 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 10</span>
-            <span class="product-price">$215</span>
-          </div>
-          <img src="media/img/aeroncharger.png" alt="Product 10">
-        </div>
+  <!-- Producto 9 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="player" data-price="mid" data-tech="usb-c rechargeable">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aerondisc 2000</span>
+        <span class="product-price">$200</span>
       </div>
+      <img src="media/img/aerondisc.png" alt="Product 9">
+    </div>
+  </div>
 
-      <!-- Producto 11 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 11</span>
-            <span class="product-price">$190</span>
-          </div>
-          <img src="media/img/aeronplayer.png" alt="Product 11">
-        </div>
+  <!-- Producto 10 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="charger" data-price="low" data-tech="usb-c">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeron charger</span>
+        <span class="product-price">$35</span>
       </div>
+      <img src="media/img/aeroncharger.png" alt="Product 10">
+    </div>
+  </div>
 
-      <!-- Producto 12 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 12</span>
-            <span class="product-price">$225</span>
-          </div>
-          <img src="media/img/aeronradio.png" alt="Product 12">
-        </div>
+  <!-- Producto 11 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="player" data-price="high" data-tech="bluetooth rechargeable">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeronplayer VX10</span>
+        <span class="product-price">$290</span>
       </div>
+      <img src="media/img/aeronplayer.png" alt="Product 11">
+    </div>
+  </div>
 
-      <!-- Producto 13 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 13</span>
-            <span class="product-price">$205</span>
-          </div>
-          <img src="media/img/aeroncable.png" alt="Product 13">
-        </div>
+  <!-- Producto 12 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="radio" data-price="low" data-tech="rechargeable">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeronradio 456</span>
+        <span class="product-price">$125</span>
       </div>
+      <img src="media/img/aeronradio.png" alt="Product 12">
+    </div>
+  </div>
 
-      <!-- Producto 14 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="product-card">
-          <div class="product-info">
-            <span class="product-name">Product 14</span>
-            <span class="product-price">$210</span>
-          </div>
-          <img src="media/img/aeronhead_fondo.png" alt="Product 14">
-        </div>
+  <!-- Producto 13 -->
+  <div class="col-12 col-md-6 col-lg-4 product-item" 
+       data-category="charger" data-price="low" data-tech="usb-c">
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-name">aeron multicable</span>
+        <span class="product-price">$20</span>
       </div>
+      <img src="media/img/aeroncable.png" alt="Product 13">
+    </div>
+  </div>
+
+</div>
+
 
     </div>
   </div>
 </section>
+
+<!-- Offcanvas panel de filtros -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="filterPanel" aria-labelledby="filterPanelLabel">
+  <div class="offcanvas-header">
+    <h5 id="filterPanelLabel">filters</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h6>category</h6>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="headphones" id="filterHeadphones">
+      <label for="filterHeadphones">headphones</label>
+    </div>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="earbuds" id="filterEarbuds">
+      <label for="filterEarbuds">earbuds</label>
+    </div>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="keyboard" id="filterKeyboard">
+      <label for="filterKeyboard">keyboard</label>
+    </div>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="player" id="filterPlayer">
+      <label for="filterPlayer">player</label>
+    </div>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="radio" id="filterRadio">
+      <label for="filterRadio">radio</label>
+    </div>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="charger" id="filterCharger">
+      <label for="filterCharger">charger</label>
+    </div>
+
+    <h6 class="mt-3">price</h6>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="low" id="priceLow">
+      <label for="priceLow">under $200</label>
+    </div>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="mid" id="priceMid">
+      <label for="priceMid">$200–$400</label>
+    </div>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="high" id="priceHigh">
+      <label for="priceHigh">above $400</label>
+    </div>
+
+    <h6 class="mt-3">technology</h6>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="bluetooth" id="techBluetooth">
+      <label for="techBluetooth">bluetooth</label>
+    </div>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="wireless" id="techWireless">
+      <label for="techWireless">wireless</label>
+    </div>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="rechargeable" id="techRechargeable">
+      <label for="techRechargeable">rechargeable</label>
+    </div>
+    <div>
+      <input type="checkbox" class="filter-checkbox" data-filter="usb-c" id="techUsbC">
+      <label for="techUsbC">usb-c</label>
+    </div>
+
+    <!-- Botones -->
+    <div class="mt-4 d-flex justify-content-between">
+      <button class="btn btn-secondary" id="clearFilters">clear filters</button>
+      <button class="btn btn-primary" data-bs-dismiss="offcanvas">apply filters</button>
+    </div>
+
+  </div>
+</div>
+
+
+
 
   </main>
 

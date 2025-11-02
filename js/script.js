@@ -61,3 +61,34 @@ $(document).ready(function() {
     }
   });
 });
+
+
+// ---------filtros----------
+
+$(document).ready(function(){
+  function applyFilters(){
+    const activeFilters = $('.filter-checkbox:checked').map(function(){
+      return $(this).data('filter');
+    }).get();
+
+    $('.product-item').each(function(){
+      const categories = [$(this).data('category'), $(this).data('price')];
+      const techs = $(this).data('tech') ? $(this).data('tech').split(' ') : [];
+      const attributes = categories.concat(techs);
+
+      const show = activeFilters.length === 0 || activeFilters.every(f => attributes.includes(f));
+      $(this).toggle(show);
+    });
+  }
+
+  // Cada vez que cambia un checkbox
+  $('.filter-checkbox').change(applyFilters);
+
+  // Botón Clear Filters
+  $('#clearFilters').click(function(){
+    $('.filter-checkbox').prop('checked', false);
+    applyFilters();
+  });
+});
+
+
