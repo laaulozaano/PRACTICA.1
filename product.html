@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Practica 1</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg py-3">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="media/img/logo_aeron.svg" alt="Logo">
+            </a>
+
+            <!-- Botón responsive -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Enlaces -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Carrito -->
+            <div class="d-flex">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-cart3"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="product-name"
+                    style="translate: none;rotate: none;scale: none;transform: translate(0px, 0px);font-size: 11vw;">
+                    aeronhead 3020X</h1>
+                <p class="price-product">400€</p> <img src="media/img/aeronhead.png" alt="Producto"
+                    class="product-image">
+            </div>
+        </section> <!-- Opciones del Producto -->
+        <section class="product-options container">
+            <div class="colors mb-3"> <span class="color" style="background:#000;"></span> <span class="color"
+                    style="background:#fff;"></span> <span class="color" style="background:#f00;"></span> </div>
+            <div class="accordion mb-3" id="productAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"> <button class="accordion-button" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#overview"> Overview </button> </h2>
+                    <div id="overview" class="accordion-collapse collapse show">
+                        <div class="accordion-body">Descripción general del producto...</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo"> <button class="accordion-button collapsed"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#materials"> Materials </button>
+                    </h2>
+                    <div id="materials" class="accordion-collapse collapse">
+                        <div class="accordion-body">Materiales del producto...</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree"> <button class="accordion-button collapsed"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#box"> Box Content </button> </h2>
+                    <div id="box" class="accordion-collapse collapse">
+                        <div class="accordion-body">Contenido de la caja...</div>
+                    </div>
+                </div>
+            </div> <button class="btn btn-primary add-to-cart">Add to Cart</button>
+        </section>
+
+        <!-- Slideshow Lateral -->
+        <div class="product-slideshow">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="1.png" alt="Slide 1"></div>
+                    <div class="swiper-slide"><img src="2.png" alt="Slide 2"></div>
+                    <div class="swiper-slide"><img src="3.png" alt="Slide 3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <section class="features container my-5">
+            <div class="row text-center">
+                <div class="col-md-4 feature">
+                    <img src="icon1.png" alt="">
+                    <h3>Mejor Chip</h3>
+                    <p>Descripción del feature.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <img src="icon2.png" alt="">
+                    <h3>Last Gen Materials</h3>
+                    <p>Descripción del feature.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <img src="icon3.png" alt="">
+                    <h3>Otro Feature</h3>
+                    <p>Descripción del feature.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Chips por capas -->
+        <section class="chips">
+            <img src="chip-layer1.png" class="chip layer1" alt="Layer 1">
+            <img src="chip-layer2.png" class="chip layer2" alt="Layer 2">
+            <img src="chip-layer3.png" class="chip layer3" alt="Layer 3">
+            <img src="chip-layer4.png" class="chip layer4" alt="Layer 4">
+        </section>
+
+        <!-- Sección Reviews -->
+        <section class="reviews container my-5">
+            <div class="row">
+                <div class="col-md-4 total-review text-center">
+                    <h2>4.9 ⭐</h2>
+                    <p>39 Reviews</p>
+                </div>
+                <div class="col-md-4 reviewer-photo text-center">
+                    <img src="persona1.png" alt="Review">
+                </div>
+                <div class="col-md-4 reviews-list">
+                    <div class="review">Muy buen producto...</div>
+                    <div class="review">Excelente calidad...</div>
+                    <div class="review">Recomendado totalmente...</div>
+                </div>
+            </div>
+            <div class="review-pagination mt-3 text-center">
+                <button class="prev btn btn-secondary btn-sm">Prev</button>
+                <button class="next btn btn-secondary btn-sm">Next</button>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="container-fluid px-3">
+
+                <!-- Logo gigante -->
+                <div class="text-center footer-logo-wrapper">
+                    <img src="media/img/logo_aeron.svg" alt="Aeron Logo" class="footer-logo">
+                </div>
+
+                <!-- Slogan -->
+                <h4 class="footer-slogan text-center">born to inspire</h4>
+
+                <!-- Redes sociales -->
+                <div class="d-flex justify-content-center footer-socials">
+                    <a href="#" class="footer-social mx-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="footer-social mx-3"><i class="bi bi-tiktok"></i></a>
+                    <a href="#" class="footer-social mx-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="footer-social mx-3"><i class="bi bi-envelope"></i></a>
+                </div>
+
+                <!-- Links distribuidos en 4 columnas -->
+                <div class="d-flex justify-content-between flex-wrap footer-links">
+                    <a href="#">Cookie Settings</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Management</a>
+                </div>
+
+                <!-- Flecha subir arriba -->
+                <div class="text-center footer-scroll-top">
+                    <a href="#top" class="scroll-top"><i class="bi bi-arrow-up-circle"></i></a>
+                </div>
+
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+        </script>
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+
+        <!-- Mi JS -->
+        <script src="js/script.js"></script>
+</body>
+
+</html>

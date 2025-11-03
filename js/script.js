@@ -92,3 +92,79 @@ $(document).ready(function(){
 });
 
 
+
+// product page----------
+gsap.registerPlugin(ScrollTrigger);
+
+let heroTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 1.5,
+    pin: true
+  }
+});
+
+// Animación del título: crece suavemente y luego se reduce a 3vw
+heroTL.fromTo(".product-name", 
+  { scale: 1, yPercent: 0 },
+  { scale: 1, yPercent: -20, ease: "power2.inOut" } // crece al inicio
+).to(".product-name", 
+  { fontSize: '3vw', yPercent: -5, scale: 1, ease: "power2.inOut" } // se reduce suavemente al final
+);
+
+// Animación de la imagen
+heroTL.fromTo(".product-image",
+  { scale: 1, xPercent: 0, yPercent: 0 },
+  { scale: 0.85, xPercent: 60, yPercent: 0, ease: "power2.inOut" },
+  "<"
+);
+
+
+
+
+
+// Chips scroll
+gsap.utils.toArray(".chip").forEach((layer, i) => {
+  gsap.fromTo(layer, 
+    {opacity: 0, y: 50*i}, 
+    {
+      opacity: 1, 
+      y: 0,
+      scrollTrigger: {
+        trigger: ".chips",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    }
+  );
+});
+
+// Swiper
+var swiper = new Swiper(".mySwiper", {
+  direction: "vertical",
+  loop: true,
+  autoplay: { delay: 2000 }
+});
+
+// Reviews pagination
+let currentPage = 0;
+const reviews = $(".reviews-list .review");
+
+$(".next").click(function(){
+  reviews.hide();
+  currentPage++;
+  if(currentPage >= reviews.length) currentPage = 0;
+  reviews.eq(currentPage).show();
+});
+
+$(".prev").click(function(){
+  reviews.hide();
+  currentPage--;
+  if(currentPage < 0) currentPage = reviews.length -1;
+  reviews.eq(currentPage).show();
+});
+
+reviews.hide().eq(0).show();
