@@ -98,20 +98,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 let heroTL = gsap.timeline({
   scrollTrigger: {
-    trigger: ".hero",
+    trigger: ".hero-2",
     start: "top top",
-    end: "bottom bottom",
+    end: "bottom+=100% top", // añade un extra para suavizar el final
     scrub: 1.5,
-    pin: true
+    pin: true,
+    anticipatePin: 1,
+    invalidateOnRefresh: true
   }
 });
 
-// Animación del título: crece suavemente y luego se reduce a 3vw
-heroTL.fromTo(".product-name", 
+// Animación del título: crece y luego se reduce
+heroTL.fromTo(".product-name-h1", 
   { scale: 1, yPercent: 0 },
-  { scale: 1, yPercent: -20, ease: "power2.inOut" } // crece al inicio
-).to(".product-name", 
-  { fontSize: '3vw', yPercent: -5, scale: 1, ease: "power2.inOut" } // se reduce suavemente al final
+  { scale: 1, yPercent: -20, ease: "power2.inOut" }
+).to(".product-name-h1", 
+  { fontSize: '3vw', yPercent: -5, scale: 1, ease: "power2.inOut" }
 );
 
 // Animación de la imagen

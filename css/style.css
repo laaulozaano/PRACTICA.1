@@ -134,19 +134,19 @@ body {
 
 .hero-product {
   position: absolute;
-  top: 45%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  max-width: 45vw;
+  max-width: 39vw;
 }
 
 .scroll-down {
   position: absolute;
-  bottom: 30px;
+  bottom: 1em;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1em;
+  font-size: 2em;
   cursor: default;
   animation: bounce 1.5s infinite;
 }
@@ -469,22 +469,21 @@ body {
 
 
 /* product page------------ */
-.hero {
+.hero-2 {
   position: relative;
-  height: 200vh;
-  /* altura extendida para animación */
+  height: 150vh; /* antes 150vh */
   background: #fafafa;
-}
-
-.hero-content {
-  position: sticky;
-  top: 0;
-  height: 100vh;
   overflow: hidden;
 }
 
+.hero-content {
+  position: relative;
+  height: 100vh;
+  overflow: visible;
+}
+
 /* Producto y título */
-.product-name {
+.product-name-h1{
   position: absolute;
   top: 20%;
   left: 0%;
