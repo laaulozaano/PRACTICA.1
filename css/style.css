@@ -471,7 +471,7 @@ body {
 /* product page------------ */
 .hero-2 {
   position: relative;
-  height: 150vh; /* antes 150vh */
+  height: 150vh;
   background: #fafafa;
   overflow: hidden;
 }
@@ -483,10 +483,10 @@ body {
 }
 
 /* Producto y título */
-.product-name-h1{
+.product-name-h1 {
   position: absolute;
   top: 20%;
-  left: 0%;
+  left: 1.5%;
   font-size: 12rem;
   font-weight: 700;
   color: #000;
@@ -504,19 +504,31 @@ body {
   z-index: 2;
 }
 
+/* Precio inicialmente oculto */
 .price-product {
   font-size: 4vw;
-  margin-top: 40vh;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+  text-align: left;
+  margin-top: 45vh;
 }
 
-/* Contenedor fijo de opciones */
+/* Contenedor de opciones inicialmente oculto */
 .product-options {
-  /* position: sticky; */
-  top: 20px;
-  width: 350px;
-  /* ancho fijo */
-  float: left;
-  margin-left: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+  max-width: 500px;
+  margin: 40px auto 0 auto;
+  float: none;
+  transform: translate(-30vw, -1500px);
+}
+
+.product-options.visible,
+.price-product.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .product-options .colors {

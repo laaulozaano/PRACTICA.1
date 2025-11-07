@@ -100,21 +100,33 @@ let heroTL = gsap.timeline({
   scrollTrigger: {
     trigger: ".hero-2",
     start: "top top",
-    end: "bottom+=100% top", // añade un extra para suavizar el final
+    end: "bottom+=150% top",
     scrub: 1.5,
     pin: true,
     anticipatePin: 1,
-    invalidateOnRefresh: true
+    invalidateOnRefresh: true,
+    onUpdate: (self) => {
+      // cuando la animación esté al 90% aprox, mostramos el precio y el acordeón
+      if (self.progress > 0.85) {
+        document.querySelector(".price-product").classList.add("visible");
+        document.querySelector(".product-options").classList.add("visible");
+      } else {
+        document.querySelector(".price-product").classList.remove("visible");
+        document.querySelector(".product-options").classList.remove("visible");
+      }
+    }
   }
 });
 
-// Animación del título: crece y luego se reduce
-heroTL.fromTo(".product-name-h1", 
-  { scale: 1, yPercent: 0 },
-  { scale: 1, yPercent: -20, ease: "power2.inOut" }
-).to(".product-name-h1", 
-  { fontSize: '3vw', yPercent: -5, scale: 1, ease: "power2.inOut" }
-);
+// Animación del título
+heroTL
+  .fromTo(".product-name-h1",
+    { scale: 1, yPercent: 0 },
+    { scale: 1, yPercent: -20, ease: "power2.inOut" }
+  )
+  .to(".product-name-h1",
+    { fontSize: '3vw', yPercent: -5, scale: 1, ease: "power2.inOut" }
+  );
 
 // Animación de la imagen
 heroTL.fromTo(".product-image",
@@ -122,6 +134,7 @@ heroTL.fromTo(".product-image",
   { scale: 0.85, xPercent: 60, yPercent: 0, ease: "power2.inOut" },
   "<"
 );
+
 
 
 
