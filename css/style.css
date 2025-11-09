@@ -195,7 +195,6 @@ body {
 /* Wrapper interno para que la imagen ocupe todo el alto de la columna */
 .image-wrapper {
   height: 85vh;
-  /* ajusta la altura deseada */
 }
 
 /* Imagen que ocupa todo el contenedor y se recorta si es necesario */
@@ -205,7 +204,6 @@ body {
   object-fit: cover;
   object-position: center;
   transition: opacity 0.25s ease-in-out;
-  /* coincide con JS */
 }
 
 
@@ -471,7 +469,7 @@ body {
 /* product page------------ */
 .hero-2 {
   position: relative;
-  height: 150vh;
+  height: 120vh;
   background: #fafafa;
   overflow: hidden;
 }
@@ -494,9 +492,10 @@ body {
   max-width: 100%;
 }
 
+/* Imagen */
 .product-image {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 30%;
   transform: translate(-50%, -10%);
   width: 50rem;
@@ -504,31 +503,36 @@ body {
   z-index: 2;
 }
 
-/* Precio inicialmente oculto */
-.price-product {
-  font-size: 4vw;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-  text-align: left;
-  margin-top: 45vh;
-}
-
-/* Contenedor de opciones inicialmente oculto */
+/* Precio y acordeón - inicialmente ocultos */
+.price-product,
 .product-options {
+  position: absolute;
+  left: 2%;
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-  max-width: 500px;
-  margin: 40px auto 0 auto;
-  float: none;
-  transform: translate(-30vw, -1500px);
+  transform: translateY(80px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.product-options.visible,
-.price-product.visible {
+.price-product.visible,
+.product-options.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Posición final */
+.price-product {
+  top: 29%;
+  left: 1.5%;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.product-options {
+  top: 48%;
+  width: 29%;
+  position: absolute;
+  min-height: 400px; 
 }
 
 .product-options .colors {
@@ -543,9 +547,76 @@ body {
   cursor: pointer;
 }
 
-.add-to-cart {
-  margin-top: 20px;
+/* Acordeón estilizado */
+.product-options .accordion-button {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  padding: 1rem;
 }
+
+.product-options .accordion-button:focus {
+  box-shadow: none;
+}
+
+.product-options .accordion-button:not(.collapsed) {
+  color: #000;
+  background: #ffffff;
+}
+
+.product-options .accordion-item {
+  border-bottom: 2px solid #000000;
+}
+
+.product-options .accordion-body {
+  font-family: 'Geist', sans-serif;
+  font-size: 1vw;
+  color: #000;
+  padding: 1rem;
+}
+
+.color-btn-product{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, outline 0.2s;
+  border: 0.5px solid #000;
+}
+
+.color-btn-product:hover {
+  transform: scale(1.2);
+}
+
+
+.add-to-cart {
+  background-color: #000;
+  color: #fff;
+  border-radius: 0;
+  padding-block: 0.7rem;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  width: 100%;
+  border: none;
+  position: absolute;
+  bottom: -2vh;
+  left: 0;
+  transform: translateY(120%);
+}
+
+.add-to-cart:hover {
+  background-color: #F1EA92;
+  border: 0.01rem solid #000;
+  color: #000;
+}
+
+
+
 
 /* Slideshow a la derecha */
 .product-slideshow {
