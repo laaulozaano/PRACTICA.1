@@ -115,6 +115,128 @@ body {
   font-size: 18px;
 }
 
+
+/* ----------CART SIDEBAR--------- */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -50vw; /* fuera de pantalla inicialmente */
+  width: 50vw;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+  z-index: 1050;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-sidebar.open {
+  right: 0;
+}
+
+
+.cart-close {
+  cursor: pointer;
+  font-weight: 500;
+  color: black;
+}
+
+.cart-body {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.cart-item-img {
+  width: 15vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.qty-btn {
+  padding: 0 8px;
+}
+
+.qty-number {
+  min-width: 20px;
+  text-align: center;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item-price {
+  margin-bottom: 0.5rem;
+}
+
+.cart-item-remove {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+
+/* ----------MODAL DESCUENTO--------- */
+.discount-modal {
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+
+
+/* Inputs y botones */
+.discount-modal input {
+  border-radius: 0;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Solo para el botón de subscribe */
+.discount-modal form button {
+  background-color: #000;
+  color: #fff;
+  border-radius: 0;
+  padding-block: 0.7rem;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  width: 100%;
+}
+
+.discount-modal form button:hover {
+  background-color: #F1EA92;
+  border: 0.01rem solid #000;
+  color: black;
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: black;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  color: white;
+}
+
+.modal-close-btn:hover {
+  color: #F1EA92;
+}
+
+.modal-close-btn i {
+  padding: .5rem;
+}
+
+
+
 /* -----------HERO------------- */
 .hero {
   position: relative;
@@ -146,7 +268,6 @@ body {
   bottom: 1em;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2em;
   cursor: default;
   animation: bounce 1.5s infinite;
 }
@@ -409,7 +530,6 @@ body {
 .footer {
   background-color: #fff;
   color: #000;
-  min-height: 85vh;
   padding: 3rem 0;
 }
 
@@ -647,4 +767,164 @@ body {
     width: 100%;
     margin-bottom: 40px;
   }
+}
+
+
+
+
+/* ----------SHOP PAGE---------- */
+
+.shop-section .container {
+  max-width: 100%;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 4rem;
+}
+
+/* Filters y búsqueda */
+.filter-toggle {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filter-toggle i {
+  font-size: 1.2rem;
+}
+
+.search-bar {
+  max-width: 300px;
+  width: 100%;
+}
+
+.search-input {
+  border-radius: 0;
+  padding-right: 2rem;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+}
+
+/* Product cards */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+  padding: 0 5px;
+}
+
+.product-name {
+  font-size: 1rem;
+}
+
+.product-price {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.product-card img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Offcanvas filtros */
+.offcanvas {
+  width: 250px;
+}
+
+.offcanvas-header h5 {
+  font-weight: 500;
+}
+
+.filter-checkbox {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Offcanvas botones */
+
+#filterPanel .btn-primary {
+  background-color: #000;
+  color: #fff;
+  border-radius: 0;
+  padding-block: 0.7rem;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  width: 48%;
+  border: 0.01rem solid #000;
+  transition: background 0.3s ease;
+}
+
+#filterPanel .btn-primary:hover {
+  background-color: #F1EA92;
+  border: 0.01rem solid #000;
+  color: black;
+}
+
+#filterPanel .btn-secondary {
+  background-color: white;
+  color: black;
+  border-radius: 0;
+  padding-block: 0.7rem;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  width: 48%;
+  border: 0.01rem solid #000;
+  transition: background 0.3s ease;
+}
+
+#filterPanel .btn-secondary:hover {
+  background-color: #F1EA92;
+  border: 0.01rem solid #000;
+  color: black;
+}
+
+
+/* ----------CONTACT PAGE---------- */
+
+
+
+.contact-section {
+  width: 100%;
+  padding-top: 6rem; /* espacio suficiente para que no se solape con el navbar */
+}
+
+.contact-left {
+  background-color: #fff; /* opcional */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-left h1 {
+  font-size: 8rem;
+  font-weight: 600;
+}
+
+.contact-right img {
+  width: calc(100% - 20px); /* ancho restando padding */
+  height: 100%;
+  object-fit: cover;
 }

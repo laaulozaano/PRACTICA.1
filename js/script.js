@@ -1,6 +1,56 @@
+// ----------MODAL----------
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const myModal = new bootstrap.Modal(document.getElementById('discountModal'));
+    myModal.show();
+  }, 3000); // se abre a los 3 segundos
+});
+
+$(document).ready(function(){
+
+  // Abrir carrito al click en icono (añade id="cartIcon" al carrito en navbar)
+  $('#cartIcon').click(function(){
+    $('#cartSidebar').addClass('open');
+  });
+
+  // Cerrar carrito
+  $('#closeCart').click(function(){
+    $('#cartSidebar').removeClass('open');
+  });
+
+  // Quitar producto
+  $('.cart-item-remove').click(function(){
+    $(this).closest('.cart-item').remove();
+    updateSubtotal();
+  });
+
+  // Incrementar / Decrementar cantidad
+  $('.qty-btn').click(function(){
+    var $qty = $(this).siblings('.qty-number');
+    var current = parseInt($qty.text());
+    if($(this).hasClass('plus')) {
+      $qty.text(current + 1);
+    } else if($(this).hasClass('minus') && current > 1) {
+      $qty.text(current - 1);
+    }
+    updateSubtotal();
+  });
+
+  // Función actualizar subtotal
+  function updateSubtotal(){
+    var subtotal = 0;
+    $('.cart-item').each(function(){
+      var price = parseFloat($(this).data('price'));
+      var qty = parseInt($(this).find('.qty-number').text());
+      subtotal += price * qty;
+    });
+    $('#cartSubtotal').text('$' + subtotal);
+  }
+
+});
+
 
 // ----------ANIMACIÓN CAMBIO DE IMAGEN COLOR----------
-
 
 $(document).ready(function(){
   $('.color-btn').click(function(){
