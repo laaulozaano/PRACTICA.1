@@ -330,25 +330,6 @@ body {
 
 
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .same-height-row {
-    flex-direction: column;
-  }
-
-  .img-responsive {
-    max-height: 60vh;
-    margin-bottom: 20px;
-  }
-
-  .fade-image {
-    max-width: 90%;
-  }
-}
-
-
-
-
 /* ------SLIDER-------- */
 
 .best-sellers {
@@ -397,7 +378,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  height: 100%;
+  height: 90%;
 }
 
 .product-info {
@@ -928,3 +909,67 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+
+/* MEDIA QUERIES */
+
+/* Móviles pequeños */
+@media (max-width: 576px) { 
+
+ }
+
+/* Tablets verticales / móviles grandes */
+@media (max-width: 768px) { 
+
+ }
+
+/* Portátiles pequeños / tablets horizontales */
+@media (max-width: 992px) { 
+
+  /* Hero */
+.hero-product {
+    max-width: 45vw;
+ }
+  /* imagenes de producto */
+  .product-images-row .col-md-4,
+  .product-images-row .col-md-8 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .image-wrapper img {
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .container-aeronhead3002x {
+    padding: 0rem 20px;
+}
+
+  /* Our story */
+
+  .our-story {
+    height: 100%;
+  }
+  .our-story .col-md-6 {
+    height: 77vh;
+  }
+
+
+      /* contact */
+  .contact-section .col-lg-8,
+  .contact-section .col-lg-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .contact-right img {
+    width: calc(100% - 20px);
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .contact-left h1 {
+    font-size: 5rem;
+  }
+ }
