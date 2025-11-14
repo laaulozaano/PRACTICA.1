@@ -256,7 +256,7 @@ body {
 
 .hero-product {
   position: absolute;
-  top: 43%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -270,6 +270,7 @@ body {
   transform: translateX(-50%);
   cursor: default;
   animation: bounce 1.5s infinite;
+  font-size: 1.2vw;
 }
 
 /* Animación tipo “bounce” scroll down */
