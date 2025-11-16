@@ -809,7 +809,8 @@ body {
   display: flex;
   gap: 2vw;
   margin-top: 8vh;
-  font-family: inherit; /* usar la fuente global */
+  height: 100vh;
+  align-items: center;
 }
 
 /* COLUMNA IZQUIERDA */
@@ -818,27 +819,29 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 25vh;
+  height: 94vh;
+  margin-left: 2vh;
 }
 
 .rating-number {
   font-size: 4vw;
-  font-weight: 700;
+  margin-bottom: -2vh;
 }
 
 .rating-stars {
-  color: #FFD700;
-  font-size: 1.5vw;
+  color: #000;
+  font-size: 2.5vw;
+  margin-bottom: 76vh;
 }
 
 .total-reviews {
-  font-size: 1vw;
+  font-size: 1.3vw;
   color: #555;
 }
 
 /* COLUMNA CENTRAL */
 .reviews-center {
-  width: 30%;
+  width: 57%;
 }
 
 .reviews-product {
@@ -856,7 +859,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2vh;
-  height: 35vh; /* altura de 4 reviews visibles */
+  height: 35vh;
+  /* altura de 4 reviews visibles */
   overflow: hidden;
 }
 
