@@ -336,16 +336,16 @@ body {
 
 .best-sellers {
   height: 100vh;
-  /* sección entera ocupa toda la pantalla */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding-left: 1vw;
+  margin-top: 4vh;
 }
 
 .container-custom {
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -806,11 +806,12 @@ body {
 /* REVIEWS------------------ */
 
 .reviews-section {
+  width: 100%;
   display: flex;
-  gap: 2vw;
-  margin-top: 8vh;
-  height: 100vh;
+  justify-content: space-between;
   align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 /* COLUMNA IZQUIERDA */
@@ -819,19 +820,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 94vh;
+  height: 100vh;
   margin-left: 2vh;
 }
 
 .rating-number {
   font-size: 4vw;
-  margin-bottom: -2vh;
+  margin-bottom: -4vh;
 }
 
 .rating-stars {
   color: #000;
   font-size: 2.5vw;
-  margin-bottom: 76vh;
+  margin-bottom: 78vh;
 }
 
 .total-reviews {
@@ -842,6 +843,8 @@ body {
 /* COLUMNA CENTRAL */
 .reviews-center {
   width: 57%;
+  display: flex;
+  justify-content: center;
 }
 
 .reviews-product {
@@ -852,66 +855,81 @@ body {
 /* COLUMNA DERECHA */
 .reviews-right {
   width: 45%;
-  position: relative;
-}
-
-.reviews-carousel {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 2vh;
-  height: 35vh;
-  /* altura de 4 reviews visibles */
-  overflow: hidden;
+  justify-content: space-around;
+  padding: 0rem 2rem;
+  box-sizing: border-box;
+  margin-top: 6vh;
 }
 
-.review-item {
+/* Contenedor que muestra 4 reviews */
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 80vh;
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.4s ease;
-  font-size: 1rem;
-  color: #000;
+  transition: opacity 0.4s ease;
 }
 
-.review-item p {
-  margin-bottom: 0.5rem;
+.review {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.3rem;
 }
 
-.review-item .stars {
+.review .stars {
   color: #FFD700;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
 }
 
-.review-item .reviewer {
+.review .author {
   font-weight: bold;
   margin-top: 0.3rem;
 }
 
-/* CONTROLES */
-.reviews-controls {
+.reviews-left,
+.reviews-center,
+.reviews-right {
+  box-sizing: border-box;
+  /* evita que padding rompa el ancho */
+}
+
+/* PAGINACIÓN */
+.reviews-pagination {
+  margin-top: 2rem;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  margin-top: 1rem;
   gap: 1rem;
 }
 
-.reviews-controls button {
+.arrow-btn {
+  font-size: 1.2rem;
+  padding: 0.4rem 0.8rem;
+  background: none;
+  border: 0px solid #000;
+  cursor: pointer;
+  transition: 1.2s;
+}
+
+.arrow-btn:hover {
   background: #000;
   color: #fff;
-  border: none;
-  padding: 0.5rem 0.8rem;
+}
+
+.pages span {
+  margin: 0 0.3vw;
   cursor: pointer;
-  transition: all 0.2s ease;
+  font-size: 1.5rem;
 }
 
-.reviews-controls button:hover {
-  background: #F1EA92;
-  color: #000;
-}
-
-#review-page {
+.pages .active-page {
   font-weight: bold;
+  text-decoration: underline;
 }
-
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -931,6 +949,17 @@ body {
   }
 }
 
+.product-name-carusel {
+  font-size: 2rem;
+}
+
+.product-price-carusel {
+  font-size: 1.5rem;
+}
+
+.h1-product {
+  font-size: 3rem;
+}
 
 
 
@@ -1153,9 +1182,12 @@ body {
 /* Tablets verticales / móviles grandes */
 @media (max-width: 768px) {
 
-  html, body {
-    overflow-x: hidden; /* corta cualquier overflow horizontal */
+  html,
+  body {
+    overflow-x: hidden;
+    /* corta cualquier overflow horizontal */
   }
+
   /* Navbar */
   .navbar {
     display: flex;
@@ -1171,18 +1203,20 @@ body {
 
   .navbar-toggler {
     order: 2;
-    margin-left: 10px; /* separarlo un poco del carrito */
+    margin-left: 10px;
+    /* separarlo un poco del carrito */
   }
 
   .navbar .bi-cart3 {
     font-size: 23px;
-}
+  }
 
   #navbarNav {
     order: 4;
     width: 100%;
   }
-    #navbarNav {
+
+  #navbarNav {
     text-align: center !important;
   }
 
@@ -1205,7 +1239,7 @@ body {
     right: -100%;
     width: 100%;
     height: 100%;
-}
+  }
 
   .cart-item-img {
     width: 30vw;
@@ -1214,17 +1248,17 @@ body {
   .fw-bold {
     font-weight: 600;
     font-size: 1.3rem;
-}
+  }
 
-.cart-item-price {
+  .cart-item-price {
     font-size: 1.5rem;
-}
+  }
 
-.cart-item-remove {
+  .cart-item-remove {
     font-size: 3rem;
-}
+  }
 
-h5 {
+  h5 {
     font-size: 1.8rem;
   }
 
@@ -1240,14 +1274,15 @@ h5 {
     font-size: 1.5rem;
   }
 
-    /* Hero */
+  /* Hero */
   .hero-product {
     max-width: 80vw;
-}
+  }
+
   .scroll-down {
     font-size: 2.5vw;
   }
-  
+
 }
 
 /* Móviles pequeños */

@@ -218,50 +218,105 @@ gsap.utils.toArray(".chip-img").forEach((img, i) => {
 
 // Carousel reviews
 // JS para carousel de reviews
-const reviews = document.querySelectorAll('.review-item');
-const reviewsPerPage = 4;
+// ---- 20 REVIEWS ----
+const allReviews = [
+    { text: "El producto superó todas mis expectativas. La calidad de los materiales es increíble y la funcionalidad es impecable. Muy recomendable.", stars: 5, author: "María Ortega" },
+    { text: "Me sorprendió gratamente la rapidez de envío y la atención al cliente. Además, el producto funciona a la perfección.", stars: 5, author: "Carlos Gómez" },
+    { text: "Desde que lo uso, todo ha sido más fácil. La estabilidad y la eficiencia son notables. Recomiendo totalmente esta compra.", stars: 4, author: "Lucía Torres" },
+    { text: "El diseño es elegante y moderno, y el rendimiento es excelente. Se nota que es un producto de alta gama.", stars: 5, author: "Pedro Martín" },
+    { text: "Estoy muy satisfecho con la compra. El producto cumple exactamente con lo que prometen y la experiencia de uso es fantástica.", stars: 5, author: "Sandra López" },
+    { text: "Llegó en perfectas condiciones y desde el primer momento funcionó sin problemas. Una compra que repetiría sin dudarlo.", stars: 4, author: "Álvaro Ruiz" },
+    { text: "Material de alta calidad, duradero y confiable. Además, es muy fácil de usar y se adapta a cualquier necesidad.", stars: 5, author: "Patricia Vera" },
+    { text: "La atención al cliente fue excelente y resolvieron todas mis dudas antes de comprar. Muy recomendable.", stars: 5, author: "Diego Morales" },
+    { text: "La mejor compra que he hecho este año.", stars: 5, author: "Marta Blanco" },
+    { text: "Es perfecto para quienes buscan eficiencia y diseño. La relación calidad-precio es insuperable.", stars: 5, author: "Javier Montes" },
+    { text: "Me gustaría más volumen, pero buenos.", stars: 4, author: "Elena Campos" },
+    { text: "El envío fue rápido y sin problemas. Todo llegó perfectamente embalado y funcionando de maravilla.", stars: 5, author: "Raúl Castro" },
+    { text: "Tal como se describe, el producto funciona a la perfección. Estoy muy contento con mi compra.", stars: 5, author: "Isabel Reyes" },
+    { text: "Relación calidad-precio excelente.", stars: 5, author: "Tomás Herrera" },
+    { text: "Entrega rápida y producto impecable. Todo llegó en excelente estado y listo para usar. Muy satisfecho.", stars: 4, author: "Sara Molina" },
+    { text: "Lo uso para editar vídeo, van genial.", stars: 5, author: "David Pérez" },
+    { text: "Exactamente lo que buscaba. La calidad es superior y su uso es muy sencillo. Recomiendo totalmente.", stars: 5, author: "Julia Soler" },
+    { text: "Mejor de lo esperado.", stars: 5, author: "Cristina Álvarez" },
+    { text: "Muy buen producto, fácil de usar y de gran rendimiento. Cumple todas las expectativas que tenía.", stars: 4, author: "Sergio Ramos" },
+    { text: "Excelente relación calidad-precio. Funciona mejor de lo que esperaba y se nota que está bien fabricado.", stars: 5, author: "Paula Marín" }
+];
+
 let currentPage = 1;
-const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+const reviewsPerPage = 4;
 
-const prevBtn = document.getElementById('prev-review');
-const nextBtn = document.getElementById('next-review');
-const pageDisplay = document.getElementById('review-page');
+const reviewsContainer = document.getElementById("reviews-container");
+const pagesContainer = document.getElementById("reviews-pages");
+const prevBtn = document.getElementById("prev-reviews");
+const nextBtn = document.getElementById("next-reviews");
 
-function showReviews(page) {
-  const start = (page - 1) * reviewsPerPage;
-  const end = start + reviewsPerPage;
-  reviews.forEach((review, i) => {
-    if (i >= start && i < end) {
-      review.style.opacity = 1;
-      review.style.transform = "translateY(0)";
-    } else {
-      review.style.opacity = 0;
-      review.style.transform = "translateY(20px)";
-    }
-  });
-  pageDisplay.textContent = `${page} / ${totalPages}`;
+// ---- Render de reviews ----
+function renderReviews() {
+    const start = (currentPage - 1) * reviewsPerPage;
+    const end = start + reviewsPerPage;
+    const visibleReviews = allReviews.slice(start, end);
+
+    reviewsContainer.style.opacity = 0;
+
+    setTimeout(() => {
+        reviewsContainer.innerHTML = "";
+
+        visibleReviews.forEach(r => {
+            reviewsContainer.innerHTML += `
+                <div class="review">
+                    <p>${r.text}</p>
+                    <div class="stars">${"★".repeat(r.stars)}${"☆".repeat(5 - r.stars)}</div>
+                    <div class="author">${r.author}</div>
+                </div>
+            `;
+        });
+
+        reviewsContainer.style.opacity = 1;
+    }, 200);
 }
 
-prevBtn.addEventListener('click', () => {
-  if (currentPage > 1) currentPage--;
-  showReviews(currentPage);
+// ---- Crear paginación ----
+function renderPagination() {
+    const totalPages = Math.ceil(allReviews.length / reviewsPerPage);
+    pagesContainer.innerHTML = "";
+
+    for (let i = 1; i <= totalPages; i++) {
+        const page = document.createElement("span");
+        page.innerText = i;
+
+        if (i === currentPage) page.classList.add("active-page");
+
+        page.addEventListener("click", () => {
+            currentPage = i;
+            renderReviews();
+            renderPagination();
+        });
+
+        pagesContainer.appendChild(page);
+    }
+}
+
+// ---- Flechas ----
+prevBtn.addEventListener("click", () => {
+    if (currentPage > 1) {
+        currentPage--;
+        renderReviews();
+        renderPagination();
+    }
 });
 
-nextBtn.addEventListener('click', () => {
-  if (currentPage < totalPages) currentPage++;
-  showReviews(currentPage);
+nextBtn.addEventListener("click", () => {
+    const totalPages = Math.ceil(allReviews.length / reviewsPerPage);
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderReviews();
+        renderPagination();
+    }
 });
 
-// Inicializar
-showReviews(currentPage);
+// ---- Inicializar ----
+renderReviews();
+renderPagination();
 
 
-// Animación scroll imagen central
-const imgCentral = document.querySelector(".reviews-image img");
-window.addEventListener("scroll", () => {
-  const rect = imgCentral.getBoundingClientRect();
-  if (rect.top < window.innerHeight * 0.9) {
-    imgCentral.style.opacity = "1";
-    imgCentral.style.transform = "translateY(0)";
-  }
-});
+

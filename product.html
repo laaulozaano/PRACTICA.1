@@ -155,7 +155,7 @@
         <section class="product-images mt-5">
             <div class="container-aeronhead3002x">
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2 class="m-0">high fidelity sound</h2>
+                    <h2 class="h1-product">high fidelity sound</h2>
                 </div>
 
                 <section class="product-images mt-5">
@@ -174,7 +174,7 @@
         </section>
 
         <!-- Sección Reviews -->
-        <section class="reviews-section my-5">
+        <section class="reviews-section">
             <div class="reviews-left">
                 <div class="rating-number">4.9</div>
                 <div class="rating-stars">
@@ -188,116 +188,97 @@
             </div>
 
             <div class="reviews-right">
-                <div class="reviews-carousel">
-                    <!-- Aquí van las 20 reviews -->
-                    <div class="review-item">
-                        <p>"Excelente producto, superó mis expectativas."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Maria Ortega</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Muy buena calidad y rapidez en la entrega."</p>
-                        <div class="stars">★★★★</div>
-                        <div class="reviewer">Juan Pérez</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Recomiendo totalmente este producto."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Laura Sánchez</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Cumple con lo prometido, diseño excelente."</p>
-                        <div class="stars">★★★★</div>
-                        <div class="reviewer">Carlos Gómez</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Muy satisfecho con la compra."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Ana Torres</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"El envío fue rápido y el producto llegó perfecto."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Miguel Herrera</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Material de calidad y elegante."</p>
-                        <div class="stars">★★★★</div>
-                        <div class="reviewer">Sofía Ramírez</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"La atención al cliente fue excelente."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Pedro Molina</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Muy recomendable para quienes buscan calidad."</p>
-                        <div class="stars">★★★★</div>
-                        <div class="reviewer">Elena Castro</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"El producto es tal como se describe."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Andrés López</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Entrega rápida y producto impecable."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Isabel Martínez</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Muy buen diseño, cómodo y práctico."</p>
-                        <div class="stars">★★★★</div>
-                        <div class="reviewer">Javier Ruiz</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Perfecto, justo lo que buscaba."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Claudia Vega</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Producto de alta calidad y fácil de usar."</p>
-                        <div class="stars">★★★★</div>
-                        <div class="reviewer">Diego Fernández</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Me encanta, se nota la diferencia en el uso."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Lucía Moreno</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Buen precio y excelente calidad."</p>
-                        <div class="stars">★★★★</div>
-                        <div class="reviewer">Raúl Sánchez</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Cumple con todo lo que promete."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Patricia López</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"El envío fue rápido y sin problemas."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Mario Ruiz</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Muy recomendable, estoy encantado."</p>
-                        <div class="stars">★★★★</div>
-                        <div class="reviewer">Sonia Ortega</div>
-                    </div>
-                    <div class="review-item">
-                        <p>"Excelente relación calidad-precio."</p>
-                        <div class="stars">★★★★★</div>
-                        <div class="reviewer">Fernando Díaz</div>
-                    </div>
+                <div id="reviews-container" class="reviews-container">
+                    <!-- Aquí JS insertará las reviews -->
                 </div>
-                <div class="reviews-controls">
-                    <button id="prev-review">‹</button>
-                    <span id="review-page">1 / 5</span>
-                    <button id="next-review">›</button>
+
+                <div class="reviews-pagination">
+                    <button id="prev-reviews" class="arrow-btn">←</button>
+                    <div id="reviews-pages" class="pages"></div>
+                    <button id="next-reviews" class="arrow-btn">→</button>
                 </div>
             </div>
         </section>
+
+        <section class="best-sellers">
+            <div class="container-custom">
+                <h2 class="h1-product">best sellers</h2>
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Producto 1 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-info">
+                                    <span class="product-name-carusel">aeronwalk TP-7</span>
+                                    <span class="product-price-carusel">$180</span>
+                                </div>
+                                <img src="media/img/aeronwalk.png" alt="aeronbuds">
+                            </div>
+                        </div>
+
+                        <!-- Producto 2 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-info">
+                                    <span class="product-name-carusel">aeroncharger</span>
+                                    <span class="product-price-carusel">$35</span>
+                                </div>
+                                <img src="media/img/aeroncharger.png" alt="aeronwalk">
+                            </div>
+                        </div>
+
+                        <!-- Producto 3 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-info">
+                                    <span class="product-name-carusel">aeronnyl F500</span>
+                                    <span class="product-price-carusel">$495</span>
+                                </div>
+                                <img src="media/img/aeronnyl.png" alt="aeronsound">
+                            </div>
+                        </div>
+
+                        <!-- Producto 4 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-info">
+                                    <span class="product-name-carusel">aeronbox TX-6</span>
+                                    <span class="product-price-carusel">$250</span>
+                                </div>
+                                <img src="media/img/aeronbox.png" alt="aeronbox">
+                            </div>
+                        </div>
+
+                        <!-- Producto 5 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-info">
+                                    <span class="product-name-carusel">aeronkey XYZ</span>
+                                    <span class="product-price-carusel">$285</span>
+                                </div>
+                                <img src="media/img/aeronkey.png" alt="aeronnyl">
+                            </div>
+                        </div>
+
+                        <!-- Producto 6 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="product-info">
+                                    <span class="product-name-carusel">aeronplayer VX10</span>
+                                    <span class="product-price-carusel">$290</span>
+                                </div>
+                                <img src="media/img/aeronplayer.png" alt="aeronkey">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
         <!-- Footer Section -->
         <footer class="footer">
