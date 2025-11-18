@@ -570,6 +570,7 @@ body {
 
 
 /* product page------------ */
+/* product page------------ */
 .hero-2 {
   position: relative;
   height: 120vh;
@@ -613,8 +614,7 @@ body {
   left: 2%;
   opacity: 0;
   transform: translateY(80px);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .price-product.visible,
@@ -627,12 +627,12 @@ body {
 .price-product {
   top: 29%;
   left: 1.5%;
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: 400;
 }
 
 .product-options {
-  top: 48%;
+  top: 40%;
   width: 29%;
   position: absolute;
   min-height: 400px;
@@ -696,7 +696,6 @@ body {
   transform: scale(1.2);
 }
 
-
 .add-to-cart {
   background-color: #000;
   color: #fff;
@@ -717,8 +716,6 @@ body {
   border: 0.01rem solid #000;
   color: #000;
 }
-
-
 
 /* SECCIÓN DE CHIPS */
 .chip-tech {
@@ -802,9 +799,7 @@ body {
   z-index: 999;
 }
 
-
 /* REVIEWS------------------ */
-
 .reviews-section {
   width: 100%;
   display: flex;
@@ -931,24 +926,6 @@ body {
   text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .product-options {
-    position: relative;
-    float: none;
-    width: 100%;
-    margin-left: 0;
-    margin-bottom: 20px;
-  }
-
-  .product-slideshow {
-    position: relative;
-    margin-left: 0;
-    width: 100%;
-    margin-bottom: 40px;
-  }
-}
-
 .product-name-carusel {
   font-size: 2rem;
 }
@@ -961,6 +938,243 @@ body {
   font-size: 3rem;
 }
 
+/* ============================
+   BREAKPOINTS (3)
+   ============================ */
+
+/* @media (max-width: 1850px){
+  .hero-2 {
+    height: 115vh; 
+  }
+
+  .product-name-h1 {
+    font-size: 11rem; 
+    top: 20%;
+    left: 2%;
+    white-space: nowrap; 
+  }
+
+  .product-image {
+    width: 45rem; 
+    top: 15%;
+    left: 30%;
+    transform: translate(-50%, -10%);
+  }
+
+  .chip-title {
+    font-size: 10vw; 
+  }
+
+  .left-content {
+    margin-left: -7vw; 
+  }
+
+  .right-chips {
+    transform: rotate(8deg) translateX(1vw);
+  }
+}
+
+
+
+@media (max-width: 992px) {
+
+  .hero-2 {
+    height: 110vh;
+  }
+
+  .product-name-h1 {
+    font-size: 8rem;
+    top: 18%;
+    left: 2%;
+    white-space: normal;
+  }
+
+  .product-image {
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -10%);
+    width: 35rem;
+  }
+
+  .price-product {
+    font-size: clamp(1.6rem, 3.8vw, 3.6rem);
+    top: 32%;
+  }
+
+  .product-options {
+    width: 46%;
+    top: calc(var(--title-top, 20vh) + 11vh);
+  }
+
+  .right-chips {
+    transform: rotate(6deg) translateX(1vw);
+  }
+
+  .chip-title {
+    font-size: clamp(1.8rem, 9vw, 6rem);
+  }
+
+  .reviews-left {
+    width: 24%;
+  }
+
+  .reviews-center {
+    width: 52%;
+  }
+
+  .reviews-right {
+    width: 28%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .product-name-h1 {
+    font-size: clamp(3rem, 8.5vw, 6rem);
+    top: 10%;
+    left: 4%;
+  }
+
+  .product-image {
+    width: clamp(200px, 55vw, 420px);
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+  }
+
+  .price-product {
+    font-size: clamp(1.4rem, 3.2vw, 3rem);
+    top: 36%;
+  }
+
+  .product-options {
+    width: 88%;
+    top: calc(var(--title-top, 20vh) + 12vh);
+    left: 6%;
+  }
+
+  .chip-tech {
+    flex-direction: row;
+    gap: 3vw;
+    padding: 4vh 3vw;
+  }
+
+  .left-content {
+    width: 52%;
+  }
+
+  .right-chips {
+    width: 44%;
+    transform: rotate(4deg) translateX(.6vw);
+  }
+
+  .reviews-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 2rem 2rem;
+  }
+
+  .reviews-left,
+  .reviews-center,
+  .reviews-right {
+    width: 100%;
+  }
+
+  .reviews-center {
+    order: 2;
+  }
+
+  .reviews-left {
+    order: 1;
+  }
+
+  .reviews-right {
+    order: 3;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .product-name-h1 {
+    font-size: clamp(2.2rem, 7.6vw, 4.5rem);
+    left: 5%;
+    top: 8%;
+  }
+
+  .product-image {
+    width: 92%;
+    left: 50%;
+    top: 18%;
+    transform: translate(-50%, -10%);
+  }
+
+  .price-product {
+    font-size: clamp(1.1rem, 4vw, 2.4rem);
+    left: 5%;
+    top: calc(var(--title-top, 18vh) + 8vh);
+  }
+
+  .product-options {
+    width: 92%;
+    left: 4%;
+    top: calc(var(--title-top, 18vh) + 12vh);
+    position: absolute;
+  }
+
+
+  .chip-tech {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 3vh 4vw;
+  }
+
+  .left-content,
+  .right-chips {
+    width: 100%;
+    transform: none;
+  }
+
+  .right-chips {
+    order: 2;
+  }
+
+  .left-content {
+    order: 1;
+  }
+
+
+  .reviews-section {
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+
+  .reviews-left,
+  .reviews-center,
+  .reviews-right {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .reviews-center {
+    order: 2;
+  }
+
+  .reviews-left {
+    order: 1;
+  }
+
+  .reviews-right {
+    order: 3;
+    max-height: none;
+  }
+
+  .reviews-container {
+    max-height: none;
+    overflow: visible;
+  }
+} */
 
 
 /* ----------SHOP PAGE---------- */
@@ -1123,7 +1337,6 @@ body {
   object-fit: cover;
 }
 
-
 /* MEDIA QUERIES */
 
 /* Portátiles pequeños / tablets horizontales */
@@ -1285,28 +1498,54 @@ body {
 
 
   /* -------------CONTACT--------------- */
+  .contact-left h1 {
+    font-size: 4rem;
+  }
+
+  strong {
+    font-size: 1.5rem;
+  }
+
+  .mb-2 {
+    margin-bottom: 0.5rem !important;
+    font-size: 1.7vw;
+  }
+
+}
+
+/* Móviles pequeños */
+@media (max-width: 576px) {
+
+
+  /* -----CONTACT------- */
+  .contact-left h1 {
+    font-size: 3rem;
+  }
+
+  .mb-2 {
+    margin-bottom: 0.5rem !important;
+    font-size: 3.7vw;
+  }
+
 
   .contact-section {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    /* toda la sección ocupa la pantalla */
   }
 
-  /* Ocupan 100% del ancho */
   .contact-section .col-lg-8,
   .contact-section .col-lg-4 {
     flex: 0 0 100%;
     max-width: 100%;
     justify-content: normal !important;
     height: 50vh;
+            margin-top: -20vh;
   }
 
-  /* Imagen arriba */
   .contact-right {
     order: -1;
     height: 35vh;
-    /* más pequeña en altura */
     overflow: hidden;
   }
 
@@ -1316,7 +1555,6 @@ body {
     object-fit: cover;
   }
 
-  /* Texto */
   .contact-left {
     order: 1;
     height: 45vh;
@@ -1329,17 +1567,8 @@ body {
     line-height: 1.1;
   }
 
-  /* Footer ocupa el resto */
-  footer {
-    height: 20vh;
-    overflow: hidden;
-  }
-
-  .footer-logo {
-    width: calc(100% - 20px);
-    margin-top: -13vh;
-  }
+  .h-100 {
+    height: 122% !important;
 }
 
-/* Móviles pequeños */
-@media (max-width: 576px) {}
+}
