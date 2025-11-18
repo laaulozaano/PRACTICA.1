@@ -145,46 +145,46 @@ $(document).ready(function () {
 
 
 // product page----------
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-let heroTL = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".hero-2",
-    start: "top top",
-    end: "bottom+=150% top",
-    scrub: 1.5,
-    pin: true,
-    anticipatePin: 1,
-    invalidateOnRefresh: true,
-    onUpdate: (self) => {
-      // cuando el scroll esté casi al final, mostramos precio y opciones
-      if (self.progress > 0.75) {
-        document.querySelector(".price-product").classList.add("visible");
-        document.querySelector(".product-options").classList.add("visible");
-      } else {
-        document.querySelector(".price-product").classList.remove("visible");
-        document.querySelector(".product-options").classList.remove("visible");
-      }
-    }
-  }
-});
+// let heroTL = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".hero-2",
+//     start: "top top",
+//     end: "bottom+=150% top",
+//     scrub: 1.5,
+//     pin: true,
+//     anticipatePin: 1,
+//     invalidateOnRefresh: true,
+//     onUpdate: (self) => {
+//       if (self.progress > 0.75) {
+//         document.querySelector(".price-product").classList.add("visible");
+//         document.querySelector(".product-options").classList.add("visible");
+//       } else {
+//         document.querySelector(".price-product").classList.remove("visible");
+//         document.querySelector(".product-options").classList.remove("visible");
+//       }
+//     }
+//   }
+// });
+
 
 // Animación del título
-heroTL
-  .fromTo(".product-name-h1",
-    { scale: 1, yPercent: 0 },
-    { scale: 1, yPercent: -20, ease: "power2.inOut" }
-  )
-  .to(".product-name-h1",
-    { fontSize: '4vw', yPercent: -5, scale: 1, ease: "power2.inOut" }
-  );
+// heroTL
+//   .fromTo(".product-name-h1",
+//     { scale: 1, yPercent: 0 },
+//     { scale: 1, yPercent: -20, ease: "power2.inOut" }
+//   )
+//   .to(".product-name-h1",
+//     { fontSize: '4vw', yPercent: -5, scale: 1, ease: "power2.inOut" }
+//   );
 
 // Animación de la imagen
-heroTL.fromTo(".product-image",
-  { scale: 1, xPercent: 0, yPercent: 0 },
-  { scale: 1.1, xPercent: 60, yPercent: 5, ease: "power2.inOut" },
-  "<"
-);
+// heroTL.fromTo(".product-image",
+//   { scale: 1, xPercent: 0, yPercent: 0 },
+//   { scale: 1.1, xPercent: 60, yPercent: 5, ease: "power2.inOut" },
+//   "<"
+// );
 
 
 
@@ -217,7 +217,6 @@ gsap.utils.toArray(".chip-img").forEach((img, i) => {
 
 
 // Carousel reviews
-// JS para carousel de reviews
 // ---- 20 REVIEWS ----
 const allReviews = [
     { text: "El producto superó todas mis expectativas. La calidad de los materiales es increíble y la funcionalidad es impecable. Muy recomendable.", stars: 5, author: "María Ortega" },
