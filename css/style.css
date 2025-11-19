@@ -596,7 +596,7 @@ body {
   position: relative;
   top: 0%;
   left: 1.5%;
-  font-size: 12rem;
+  font-size: 11vw;
   font-weight: 700;
   color: #000;
   transform-origin: left center;
@@ -609,15 +609,15 @@ body {
   top: 6%;
   left: 50%;
   transform: translate(-50%, -10%);
-  width: 50rem;
+  width: 38vw;
   max-width: 90vw;
   z-index: 2;
   transform: rotate(15deg);
 }
 
 .color-btn-product {
-  width: 30px;
-  height: 30px;
+  width: 2vw;
+  height: 2vw;
   border-radius: 50%;
   margin-left: 10px;
   cursor: pointer;
@@ -641,7 +641,7 @@ body {
 }
 
 .accordion {
-  margin-top: 2vh;
+  margin-top: 5vh;
 }
 
 
@@ -699,12 +699,35 @@ body {
   color: #000;
 }
 
+/* --- ANIMACIONES FADE IN --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Imagen con zoom leve */
+.fade-img {
+  transform: translate(-50%, -10%) rotate(15deg) scale(0.96);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-img.show {
+  transform: translate(5%, 0%) rotate(15deg) scale(1);
+}
+
 /* SECCIÓN DE CHIPS */
 .chip-tech {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 5vw;
+  max-width: 68%;
 }
 
 /* COLUMNA IZQUIERDA */
@@ -745,6 +768,7 @@ body {
   width: 120%;
   margin-bottom: 6vh;
   line-height: 1.5;
+  text-align: justify;
 }
 
 /* TÍTULO PRINCIPAL */
@@ -758,14 +782,14 @@ body {
 
 /* COLUMNA DERECHA (CAPAS) */
 .right-chips {
-  width: 45%;
+  width: 46%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2vh;
   position: relative;
   transform-origin: center;
-  transform: rotate(8deg) translateX(2vw);
+  transform: rotate(15deg) translateX(7vw);
 }
 
 .chip-img {
@@ -776,10 +800,10 @@ body {
   z-index: 50;
 }
 
-/* Última capa debe poder superponerse por encima del título */
 .layer3 {
   z-index: 999;
 }
+
 
 /* REVIEWS------------------ */
 .reviews-section {
@@ -924,123 +948,6 @@ body {
    ============================ */
 
 
-@media (max-width: 992px) {
-
-  .hero-2 {
-    height: 110vh;
-  }
-
-  .product-name-h1 {
-    font-size: 8rem;
-    top: 18%;
-    left: 2%;
-    white-space: normal;
-  }
-
-  .product-image {
-    left: 50%;
-    top: 35%;
-    transform: translate(-50%, -10%);
-    width: 35rem;
-  }
-
-  .price-product {
-    font-size: clamp(1.6rem, 3.8vw, 3.6rem);
-    top: 32%;
-  }
-
-  .product-options {
-    width: 46%;
-    top: calc(var(--title-top, 20vh) + 11vh);
-  }
-
-  .right-chips {
-    transform: rotate(6deg) translateX(1vw);
-  }
-
-  .chip-title {
-    font-size: clamp(1.8rem, 9vw, 6rem);
-  }
-
-  .reviews-left {
-    width: 24%;
-  }
-
-  .reviews-center {
-    width: 52%;
-  }
-
-  .reviews-right {
-    width: 28%;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .product-name-h1 {
-    font-size: clamp(3rem, 8.5vw, 6rem);
-    top: 10%;
-    left: 4%;
-  }
-
-  .product-image {
-    width: clamp(200px, 55vw, 420px);
-    top: 22%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-  }
-
-  .price-product {
-    font-size: clamp(1.4rem, 3.2vw, 3rem);
-    top: 36%;
-  }
-
-  .product-options {
-    width: 88%;
-    top: calc(var(--title-top, 20vh) + 12vh);
-    left: 6%;
-  }
-
-  .chip-tech {
-    flex-direction: row;
-    gap: 3vw;
-    padding: 4vh 3vw;
-  }
-
-  .left-content {
-    width: 52%;
-  }
-
-  .right-chips {
-    width: 44%;
-    transform: rotate(4deg) translateX(.6vw);
-  }
-
-  .reviews-section {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 2rem;
-    padding: 2rem 2rem;
-  }
-
-  .reviews-left,
-  .reviews-center,
-  .reviews-right {
-    width: 100%;
-  }
-
-  .reviews-center {
-    order: 2;
-  }
-
-  .reviews-left {
-    order: 1;
-  }
-
-  .reviews-right {
-    order: 3;
-  }
-}
 
 @media (max-width: 576px) {
 
@@ -1286,16 +1193,85 @@ body {
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 1400px) {
 
-/* Portátiles pequeños / tablets horizontales */
-@media (max-width: 992px) {
+  .right-chips {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    position: relative;
+    transform-origin: center;
+    transform: rotate(15deg) translateX(7vw);
+  }
+}
 
-  /* Hero */
+
+@media (max-width: 1200px) {
+
+  .right-chips {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    position: relative;
+    transform-origin: center;
+    transform: rotate(15deg) translateX(7vw);
+    margin-top: 12vh;
+  }
+
   .hero-product {
     max-width: 45vw;
   }
 
-  /* imagenes de producto */
+  .hero-2 {
+    position: relative;
+    height: 90vh;
+    background: #fafafa;
+    overflow: hidden;
+  }
+
+  .product-options .accordion-button {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 2.2vw;
+    color: #000;
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    padding: 1rem;
+  }
+
+  .product-options .accordion-body {
+    font-family: 'Geist', sans-serif;
+    font-size: 1.5vw;
+    color: #000;
+    padding: 1rem;
+  }
+
+  .feature-item p {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-top: 0.6rem;
+  }
+
+  .chip-title {
+    font-size: 13vw;
+    font-weight: 700;
+    width: 100vw;
+    line-height: 0.9;
+    z-index: 1;
+  }
+}
+
+/* Portátiles pequeños / tablets horizontales */
+@media (max-width: 992px) {
+
+  /* ---------INDEX---------- */
+
+
   .product-images-row .col-md-4,
   .product-images-row .col-md-8 {
     flex: 0 0 50%;
@@ -1311,8 +1287,6 @@ body {
     padding: 0rem 20px;
   }
 
-  /* Our story */
-
   .our-story {
     height: 100%;
   }
@@ -1322,7 +1296,7 @@ body {
   }
 
 
-  /* contact */
+  /* -------CONTACT---------- */
   .contact-section .col-lg-8,
   .contact-section .col-lg-4 {
     flex: 0 0 50%;
@@ -1337,6 +1311,118 @@ body {
 
   .contact-left h1 {
     font-size: 5rem;
+  }
+
+
+  /* ----------PAGE PRODUCT----------- */
+
+
+
+  .hero-product {
+    max-width: 45vw;
+  }
+
+  .hero-2 {
+    position: relative;
+    height: 65vh;
+    background: #fafafa;
+    overflow: hidden;
+  }
+
+  .product-name-h1 {
+    font-size: 11vw;
+    top: 3%;
+    left: 1%;
+    white-space: normal;
+  }
+
+  .product-image {
+    left: 47%;
+    top: 8%;
+    transform: translate(-50%, -10%);
+    width: 45vw;
+  }
+
+  .price-product {
+    font-size: clamp(1.6rem, 3.8vw, 3.6rem);
+    top: 4%;
+  }
+
+  .product-options {
+    width: 38%;
+    top: calc(var(--title-top, 9vh) + -5vh);
+  }
+
+  .accordion {
+    margin-top: 2vh;
+  }
+
+  .product-options .accordion-button {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 2.2vw;
+    color: #000;
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    padding: 1rem;
+  }
+
+  .product-options .accordion-body {
+    font-family: 'Geist', sans-serif;
+    font-size: 1.5vw;
+    color: #000;
+    padding: 1rem;
+  }
+
+
+  .right-chips {
+    transform: rotate(11deg) translateX(8vw);
+  }
+
+  .chip-title {
+    font-size: clamp(1.8rem, 9vw, 6rem);
+  }
+
+
+  .features-row {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 12vh;
+    margin-top: 2vh;
+  }
+
+  .feature-item img {
+    width: 7vw;
+    height: auto;
+  }
+
+
+  .feature-item p {
+    font-size: 1.7vw;
+    font-weight: bold;
+    margin-top: 0.6rem;
+  }
+
+
+  .chip-info {
+    font-size: 1.2rem;
+    width: 126%;
+    text-align: justify;
+    margin-bottom: 6vh;
+    line-height: 1.5;
+  }
+
+  .reviews-left {
+    width: 24%;
+  }
+
+  .reviews-center {
+    width: 52%;
+  }
+
+  .reviews-right {
+    width: 28%;
   }
 }
 
@@ -1459,6 +1545,100 @@ body {
     font-size: 1.7vw;
   }
 
+  /* -------PRODUCT------------  */
+  .hero-2 {
+    height: 70vh;
+  }
+
+  .btn {
+    font-size: 2vw;
+  }
+
+  .accordion {
+    margin-top: 2vh;
+  }
+
+  .product-image {
+    left: 43%;
+    top: 8%;
+    transform: translate(-50%, -10%);
+    width: 52vw;
+  }
+
+  .product-options {
+    width: 40%;
+    top: calc(var(--title-top, -2vh) + 7vh);
+    left: 1%;
+  }
+
+  .price-product {
+    font-size: clamp(2.3rem, 3.8vw, 3.6rem);
+    top: 4%;
+  }
+
+  .color-btn-product {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 0.5px solid #000;
+  }
+
+
+
+  .chip-tech {
+    flex-direction: row;
+    gap: 3vw;
+    padding: 4vh 3vw;
+  }
+
+  .chip-title {
+    font-size: 12vw;
+    margin-top: -7vw;
+  }
+
+  .left-content {
+    width: 60%;
+  }
+
+  .right-chips {
+    width: 74%;
+    margin-top: 9vh;
+    transform: rotate(11deg) translateX(10.6vw);
+  }
+
+  .feature-item p {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-top: 0.6rem;
+    width: 78%;
+  }
+
+  .reviews-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 2rem 2rem;
+  }
+
+  .reviews-left,
+  .reviews-center,
+  .reviews-right {
+    width: 100%;
+  }
+
+  .reviews-center {
+    order: 2;
+  }
+
+  .reviews-left {
+    order: 1;
+  }
+
+  .reviews-right {
+    order: 3;
+  }
 }
 
 /* Móviles pequeños */
