@@ -47,6 +47,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Coffekan';
+  src: url('../fonts/CoffekanRegular.ttf') format('trueType');
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -244,6 +250,13 @@ body {
   color: black;
 }
 
+.modal-script {
+  font-family: Coffekan, serif;
+  font-size: 5vw;
+  text-align: center;
+  color: #00000037;
+}
+
 
 /* -----------HERO------------- */
 .hero {
@@ -424,6 +437,13 @@ body {
   height: 100vh;
 }
 
+.story-script {
+  font-family: Coffekan, serif;
+  font-size: 8vw;
+  text-align: center;
+  color: #00000037;
+}
+
 .p-5 {
   padding: 0px 20px !important;
   position: relative;
@@ -466,7 +486,6 @@ body {
   padding-block: 0;
   /* padding reducido para que ocupe toda la altura */
 }
-
 
 .newsletter-form-wrapper {
   width: 100%;
@@ -577,7 +596,6 @@ body {
 
 
 
-/* product page------------ */
 /* product page------------ */
 .hero-2 {
   position: relative;
@@ -1097,6 +1115,13 @@ body {
   font-weight: 600;
 }
 
+.contact-script {
+  font-family: Coffekan, serif;
+  font-size: 8vw;
+  text-align: center;
+  color: #00000037;
+}
+
 .contact-right img {
   width: calc(100% - 20px);
   /* ancho restando padding */
@@ -1316,6 +1341,10 @@ body {
     height: 60vh;
   }
 
+    /* -------MODAL---------- */
+.modal-script {
+    font-size: 4vw;
+  }
 
   /* -------CONTACT---------- */
   .contact-section .col-lg-8,
@@ -1542,6 +1571,9 @@ body {
     right: 10px;
   }
 
+  .modal-script {
+    font-size: 10vw;
+  }
 
   /* Cart */
   .cart-sidebar {
@@ -1600,6 +1632,14 @@ body {
     font-size: 2vw;
   }
 
+  .newsletter-section {
+    height: auto;
+  }
+
+  .p-5 {
+    padding: 1.5rem !important;
+  }
+  
   /* -------------CONTACT--------------- */
   .contact-left h1 {
     font-size: 4rem;
@@ -1736,6 +1776,11 @@ body {
 /* Móviles pequeños */
 @media (max-width: 576px) {
 
+    /* -----MODAL------- */
+
+  .modal-script {
+    font-size: 15vw;
+  }
 
   /* -----CONTACT------- */
   .contact-left h1 {
@@ -1747,6 +1792,9 @@ body {
     font-size: 4.7vw;
   }
 
+  .d-flex {
+    flex-direction: column;
+  }
 
   .contact-section {
     display: flex;
@@ -2003,7 +2051,6 @@ body {
 
   .h1-product {
     font-size: 1.5rem;
-    margin: 2rem 0;
   }
 
   .container-aeronhead3002x {
@@ -2090,4 +2137,7 @@ body {
     padding-top: 5rem;
   }
 
+  .contact-script {
+    font-size: 14vw;
+  }
 }

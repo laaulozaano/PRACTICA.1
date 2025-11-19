@@ -27,6 +27,9 @@
   <!-- Bootstrap icons-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -135,7 +138,7 @@
                 <!-- Contenido derecha -->
                 <div class="col-md-6 p-4 d-flex flex-column justify-content-between align-items-center text-center">
                   <h3 class="fw-bold mb-3 pt-5">enjoy 15% off your first order</h3>
-                  <img src="media/img/join_the_club.png" alt="join_the_club" class="img-fluid mb-3">
+                  <p class="modal-script">Join the club</p>
                   <form class="w-100">
                     <input type="email" class="form-control w-100 mb-3" placeholder="enter your email" required>
                     <button type="submit" class="btn btn-dark w-100">subscribe</button>
@@ -146,15 +149,15 @@
           </div>
         </div>
 
-    <section class="hero">
+    <section class="hero" data-aos="fade-up">
       <img src="media/img/logo_aeron.svg" alt="Logo gigante" class="hero-logo">
       <img src="media/img/aeronhead.png" alt="Aeronhead" class="hero-product">
       <span class="scroll-down">scroll down</span>
     </section>
 
-    <section class="product-colors">
+    <section class="product-colors" data-aos="fade-up">
       <div class="container-aeronhead3002x">
-        <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="d-flex justify-content-between  mb-4">
           <h2 class="h1-product">aeronhead 3002X</h2>
           <div class="color-selector">
             <button class="color-btn active" data-img1="media/img/chica_amarillo.png"
@@ -189,7 +192,7 @@
 
 
     <!-- Best Sellers Section -->
-    <section class="best-sellers">
+    <section class="best-sellers" data-aos="fade-up">
       <div class="container-custom">
         <h2 class="h1-product">best sellers</h2>
 
@@ -267,14 +270,14 @@
       </div>
     </section>
 
-    <section class="our-story py-5">
+    <section class="our-story py-5" data-aos="fade-up">
       <div class="container-fluid">
         <div class="row align-items-center">
 
           <!-- Contenido izquierda -->
           <div class="col-md-6 d-flex flex-column justify-content-between p-5">
             <h2 class="h1-product">our story</h2>
-            <img src="media/img/born to inspire.png" alt="Story Image" class="story-img">
+            <p class="story-script">born to inspire</p>
             <p class="story-text">
               We were born in Seoul — a city that never stops moving to the beat.
               Our brand emerged from the intersection of music passion and the visual culture of the ‘80s and ‘90s.
@@ -380,6 +383,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
   </script>
   
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script src="js/aos.js"></script>
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />

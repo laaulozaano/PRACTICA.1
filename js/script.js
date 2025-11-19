@@ -50,7 +50,6 @@ $(document).ready(function () {
 });
 
 
-
 // ----------ANIMACIÓN CAMBIO DE IMAGEN COLOR----------
 
 $(document).ready(function () {
@@ -325,6 +324,3 @@ nextBtn.addEventListener("click", () => {
 // ---- Inicializar ----
 renderReviews();
 renderPagination();
-
-
-
