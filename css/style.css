@@ -233,6 +233,7 @@ body {
 .modal-close-btn i {
   padding: .5rem;
 }
+
 .discount-modal .modal-body {
   display: flex;
   flex-direction: row;
@@ -242,7 +243,8 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 10; /* Garantiza que esté sobre la imagen */
+  z-index: 10;
+  /* Garantiza que esté sobre la imagen */
   background: transparent;
   border: none;
   cursor: pointer;
@@ -1178,6 +1180,7 @@ body {
   .best-sellers {
     height: auto;
   }
+
   .h1-product {
     padding-bottom: 4rem;
   }
@@ -1259,11 +1262,11 @@ body {
   }
 
   .newsletter-section .h-100 {
-        height: inherit !important;
-    }
+    height: inherit !important;
+  }
 
   .newsletter-section .img-fluid.h-100 {
-        height: 100% !important;
+    height: 100% !important;
   }
 }
 
@@ -1272,7 +1275,7 @@ body {
 
   /* ---------INDEX---------- */
 
-/* Navbar */
+  /* Navbar */
   .navbar {
     display: flex;
     align-items: center;
@@ -1341,8 +1344,8 @@ body {
     height: 60vh;
   }
 
-    /* -------MODAL---------- */
-.modal-script {
+  /* -------MODAL---------- */
+  .modal-script {
     font-size: 4vw;
   }
 
@@ -1537,29 +1540,30 @@ body {
     /* corta cualquier overflow horizontal */
   }
 
-  
 
-/* Modal */
-/* El modal deja de ser dos columnas */
+
+  /* Modal */
+  /* El modal deja de ser dos columnas */
   .discount-modal .modal-body {
     flex-direction: column;
   }
 
   /* Imagen arriba a width 100% */
-  .discount-modal .modal-body > .col-md-6:first-child {
+  .discount-modal .modal-body>.col-md-6:first-child {
     width: 100%;
     height: auto;
   }
 
   .discount-modal img.object-fit-cover {
-    height: auto !important; /* ANULA EL h-100 */
+    height: auto !important;
+    /* ANULA EL h-100 */
     width: 100%;
     object-fit: cover;
     object-position: top;
   }
 
   /* Contenido abajo */
-  .discount-modal .modal-body > .col-md-6:last-child {
+  .discount-modal .modal-body>.col-md-6:last-child {
     width: 100%;
     padding: 2rem 1.5rem;
   }
@@ -1639,7 +1643,7 @@ body {
   .p-5 {
     padding: 1.5rem !important;
   }
-  
+
   /* -------------CONTACT--------------- */
   .contact-left h1 {
     font-size: 4rem;
@@ -1776,7 +1780,7 @@ body {
 /* Móviles pequeños */
 @media (max-width: 576px) {
 
-    /* -----MODAL------- */
+  /* -----MODAL------- */
 
   .modal-script {
     font-size: 15vw;
@@ -1789,12 +1793,9 @@ body {
 
   .mb-2 {
     margin-bottom: 0.5rem !important;
-    font-size: 4.7vw;
+    font-size: 3.7vw;
   }
 
-  .d-flex {
-    flex-direction: column;
-  }
 
   .contact-section {
     display: flex;
@@ -1835,19 +1836,21 @@ body {
     line-height: 1.1;
   }
 
-  .contact-section .col-lg-8, .contact-section .col-lg-4 {
+  .contact-section .col-lg-8,
+  .contact-section .col-lg-4 {
     flex: auto;
   }
 
-  .contact-section .col-lg-8, .contact-section .col-lg-4 {
+  .contact-section .col-lg-8,
+  .contact-section .col-lg-4 {
     margin-top: 0;
   }
 
   .h-100 {
-    height: 122% !important;
+    height: 105% !important;
   }
 
-  .scroll-down{
+  .scroll-down {
     font-size: 5vw;
   }
 
@@ -1860,17 +1863,18 @@ body {
     padding-bottom: 1rem;
   }
 
-  .product-images-row .col-md-4, .product-images-row .col-md-8 {
+  .product-images-row .col-md-4,
+  .product-images-row .col-md-8 {
     max-width: 100%;
   }
-  
+
   .swiper {
     height: auto;
   }
 
   .container-custom {
     height: auto;
-    margin-bottom: 4rem;
+    margin-bottom: 10rem;
   }
 
   .best-sellers {
@@ -1880,6 +1884,7 @@ body {
   .product-name-carusel {
     font-size: 1.1rem;
   }
+
   .product-price-carusel {
     font-size: 1.1rem;
   }
@@ -1892,12 +1897,23 @@ body {
     width: 100%;
   }
 
-  .newsletter-section .h-100{
+  .story-script {
+    font-family: Coffekan, serif;
+    font-size: 17vw;
+    text-align: center;
+    color: #0000007a;
+  }
+
+  .p-5 {
+    padding: 0.5rem !important;
+  }
+
+  .newsletter-section .h-100 {
     height: auto !important;
   }
 
   .footer {
-    padding-top: 7rem;
+    padding-top: 0rem;
     padding-bottom: 1rem;
   }
 
@@ -2138,6 +2154,6 @@ body {
   }
 
   .contact-script {
-    font-size: 14vw;
+    font-size: 0vw;
   }
 }
