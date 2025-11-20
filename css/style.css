@@ -1316,7 +1316,7 @@ body {
     font-size: 1.5rem;
   }
 
-  
+
 
   .product-images-row .col-md-4,
   .product-images-row .col-md-8 {
@@ -1371,17 +1371,18 @@ body {
   }
 
   .hero-2 {
-    height: 56vh;
+    height: 65vh;
   }
 
   .color-btn-product {
-    width: 4vw;
-    height: 4vw;
+    width: 3vw;
+    height: 3vw;
+    margin-top: 6vw;
   }
 
   .product-name-h1 {
     font-size: 11vw;
-    top: 6%;
+    top: 8%;
     left: 1%;
     white-space: normal;
   }
@@ -1395,16 +1396,16 @@ body {
 
   .price-product {
     font-size: clamp(1.6rem, 3.8vw, 3.6rem);
-    top: 4%;
+    top: 7%;
   }
 
   .product-options {
     width: 38%;
-    top: calc(var(--title-top, 9vh) + -5vh);
+    top: calc ↳ calc(9vh + -2vh) ↳ calc(97.2px + -21.6px) ↳ 75.6px (var(--title-top, 9vh) + -2vh);
   }
 
   .accordion {
-    margin-top: 2vh;
+    margin-top: 1vh;
   }
 
   .product-options .accordion-button {
@@ -1530,6 +1531,7 @@ body {
     height: auto;
   }
 }
+
 @media (max-width: 820px) {
   .chip-info {
     font-size: 1rem;
@@ -1692,7 +1694,7 @@ body {
 
   .price-product {
     font-size: clamp(2.3rem, 3.8vw, 3.6rem);
-    top: 4%;
+    top: 8%;
   }
 
   .color-btn-product {
@@ -1878,6 +1880,7 @@ body {
   .container-custom {
     height: auto;
     margin-bottom: 10rem;
+    padding-top: 0rem;
   }
 
   .best-sellers {
@@ -2108,7 +2111,7 @@ body {
   .rating-stars {
     color: #000;
     font-size: 3.5vw;
-    margin-bottom: 70vh;
+    margin-bottom: 82vh;
   }
 
   .reviews-pagination {
@@ -2120,7 +2123,7 @@ body {
   .rating-number {
     font-size: 6vw;
     margin-bottom: -2vh;
-    margin-top: 13vh;
+    margin-top: 3vh;
   }
 
   .total-reviews {
