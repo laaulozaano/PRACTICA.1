@@ -362,10 +362,11 @@ body {
 
 .container-custom {
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-top: 6rem;
 }
 
 .section-title {
@@ -591,7 +592,7 @@ body {
 /* ---------PRODUCT PAGE------------ */
 .hero-2 {
   position: relative;
-  height: 100vh;
+  height: 85vh;
   background: white;
   overflow: hidden;
 }
@@ -605,7 +606,7 @@ body {
 /* Producto y título */
 .product-name-h1 {
   position: relative;
-  top: 0%;
+  top: 3%;
   left: 1.5%;
   font-size: 11vw;
   font-weight: 700;
@@ -949,6 +950,10 @@ body {
   font-size: 3rem;
 }
 
+.h1-productt {
+  font-size: 3rem;
+}
+
 /* ----------SHOP PAGE---------- */
 
 .shop-section .container {
@@ -1169,6 +1174,14 @@ body {
   .h1-product {
     padding-bottom: 4rem;
   }
+
+  .h1-productt {
+    padding-bottom: 0;
+  }
+
+  .hero-2 {
+    height: 70vh;
+  }
 }
 
 
@@ -1303,6 +1316,7 @@ body {
     font-size: 1.5rem;
   }
 
+  
 
   .product-images-row .col-md-4,
   .product-images-row .col-md-8 {
@@ -1357,7 +1371,12 @@ body {
   }
 
   .hero-2 {
-    height: 65vh;
+    height: 56vh;
+  }
+
+  .color-btn-product {
+    width: 4vw;
+    height: 4vw;
   }
 
   .product-name-h1 {
@@ -1461,7 +1480,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: auto;
     box-sizing: border-box;
     margin-top: 2vh;
   }
@@ -1511,7 +1530,24 @@ body {
     height: auto;
   }
 }
+@media (max-width: 820px) {
+  .chip-info {
+    font-size: 1rem;
+  }
 
+  .review {
+    font-size: 1rem;
+  }
+
+  .h1-productt {
+    font-size: 2rem;
+  }
+
+  .h1-product {
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+  }
+}
 
 @media (max-width: 768px) {
 
@@ -1630,7 +1666,7 @@ body {
 
   /* -------PRODUCT------------  */
   .hero-2 {
-    height: 70vh;
+    height: 58vh;
   }
 
   .btn {
@@ -1899,7 +1935,7 @@ body {
   /* ---------------PRODUCT-------------- */
 
   .hero-2 {
-    height: auto;
+    height: 90vh;
   }
 
   .hero-content {
@@ -2041,6 +2077,7 @@ body {
 
   .h1-product {
     font-size: 1.5rem;
+    padding-bottom: 2rem;
   }
 
   .container-aeronhead3002x {
