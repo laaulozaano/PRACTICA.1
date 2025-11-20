@@ -69,7 +69,6 @@ body {
 html,
 body {
   overflow-x: hidden;
-  /* corta cualquier overflow horizontal */
 }
 
 /* ----------NAVBAR --------- */
@@ -133,7 +132,6 @@ body {
   position: fixed;
   top: 0;
   right: -50vw;
-  /* fuera de pantalla inicialmente */
   width: 50vw;
   height: 100vh;
   background-color: #fff;
@@ -244,7 +242,6 @@ body {
   top: 10px;
   right: 10px;
   z-index: 10;
-  /* Garantiza que esté sobre la imagen */
   background: transparent;
   border: none;
   cursor: pointer;
@@ -337,12 +334,10 @@ body {
   height: auto;
 }
 
-/* Wrapper interno para que la imagen ocupe todo el alto de la columna */
 .image-wrapper {
   height: 85vh;
 }
 
-/* Imagen que ocupa todo el contenedor y se recorta si es necesario */
 .image-wrapper img {
   width: 100%;
   height: 100%;
@@ -379,13 +374,11 @@ body {
 
 .swiper {
   height: 66vh;
-  /* 2/3 del viewport */
   overflow: visible;
 }
 
 .swiper-wrapper {
   display: flex;
-  /* fila de slides */
 }
 
 .swiper-slide {
@@ -482,11 +475,9 @@ body {
 
 .newsletter-section {
   height: 50vh;
-  /* altura total de la sección */
   display: flex;
   margin: 3rem 20px;
   padding-block: 0;
-  /* padding reducido para que ocupe toda la altura */
 }
 
 .newsletter-form-wrapper {
@@ -549,7 +540,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* distribuye todo verticalmente */
   height: 100%;
   max-width: 100%;
 }
@@ -598,7 +588,7 @@ body {
 
 
 
-/* product page------------ */
+/* ---------PRODUCT PAGE------------ */
 .hero-2 {
   position: relative;
   height: 100vh;
@@ -649,7 +639,6 @@ body {
   transform: scale(1.2);
 }
 
-/* Precio y acordeón - inicialmente ocultos */
 .price-product,
 .product-options {
   position: relative;
@@ -665,8 +654,6 @@ body {
   margin-top: 5vh;
 }
 
-
-/* Acordeón estilizado */
 .product-options .accordion-button {
   font-family: 'Geist', sans-serif;
   font-weight: 400;
@@ -732,7 +719,6 @@ body {
   transform: translateY(0);
 }
 
-/* Imagen con zoom leve */
 .fade-img {
   transform: translate(-50%, -10%) rotate(15deg) scale(0.96);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -886,7 +872,6 @@ body {
   margin-top: 6vh;
 }
 
-/* Contenedor que muestra 4 reviews */
 .reviews-container {
   display: flex;
   flex-direction: column;
@@ -973,7 +958,6 @@ body {
   padding-top: 4rem;
 }
 
-/* Filters y búsqueda */
 .filter-toggle {
   cursor: pointer;
   font-weight: 500;
@@ -1001,7 +985,6 @@ body {
   color: black;
 }
 
-/* Product cards */
 .product-card {
   display: flex;
   flex-direction: column;
@@ -1041,7 +1024,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Offcanvas filtros */
 .offcanvas {
   width: 250px;
 }
@@ -1055,7 +1037,6 @@ body {
   cursor: pointer;
 }
 
-/* Offcanvas botones */
 
 #filterPanel .btn-primary {
   background-color: #000;
@@ -1101,12 +1082,10 @@ body {
 .contact-section {
   width: 100%;
   padding-top: 6rem;
-  /* espacio suficiente para que no se solape con el navbar */
 }
 
 .contact-left {
   background-color: #fff;
-  /* opcional */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1126,12 +1105,18 @@ body {
 
 .contact-right img {
   width: calc(100% - 20px);
-  /* ancho restando padding */
   height: 100%;
   object-fit: cover;
 }
 
-/* MEDIA QUERIES */
+
+
+
+
+
+/* --------------MEDIA QUERIES ----------------*/
+
+
 @media (max-width: 2000px) {
   .footer {
     padding: 10rem 0;
@@ -1270,12 +1255,11 @@ body {
   }
 }
 
-/* Portátiles pequeños / tablets horizontales */
+
 @media (max-width: 1024px) {
 
   /* ---------INDEX---------- */
 
-  /* Navbar */
   .navbar {
     display: flex;
     align-items: center;
@@ -1291,7 +1275,6 @@ body {
   .navbar-toggler {
     order: 2;
     margin-left: 10px;
-    /* separarlo un poco del carrito */
   }
 
   .navbar .bi-cart3 {
@@ -1369,8 +1352,6 @@ body {
 
   /* ----------PAGE PRODUCT----------- */
 
-
-  /* ---------hero----------------- */
   .hero-product {
     max-width: 45vw;
   }
@@ -1381,7 +1362,7 @@ body {
 
   .product-name-h1 {
     font-size: 11vw;
-    top: 3%;
+    top: 6%;
     left: 1%;
     white-space: normal;
   }
@@ -1531,24 +1512,18 @@ body {
   }
 }
 
-/* Tablets verticales / móviles grandes */
+
 @media (max-width: 768px) {
 
   html,
   body {
     overflow-x: hidden;
-    /* corta cualquier overflow horizontal */
   }
 
-
-
-  /* Modal */
-  /* El modal deja de ser dos columnas */
   .discount-modal .modal-body {
     flex-direction: column;
   }
 
-  /* Imagen arriba a width 100% */
   .discount-modal .modal-body>.col-md-6:first-child {
     width: 100%;
     height: auto;
@@ -1556,19 +1531,16 @@ body {
 
   .discount-modal img.object-fit-cover {
     height: auto !important;
-    /* ANULA EL h-100 */
     width: 100%;
     object-fit: cover;
     object-position: top;
   }
 
-  /* Contenido abajo */
   .discount-modal .modal-body>.col-md-6:last-child {
     width: 100%;
     padding: 2rem 1.5rem;
   }
 
-  /* El botón de cierre en móvil */
   .modal-close-btn {
     position: absolute;
     top: 10px;
@@ -1579,7 +1551,6 @@ body {
     font-size: 10vw;
   }
 
-  /* Cart */
   .cart-sidebar {
     right: -100%;
     width: 100%;
@@ -1615,7 +1586,6 @@ body {
     font-size: 1.5rem;
   }
 
-  /* Hero */
   .hero-product {
     max-width: 80vw;
   }
@@ -1698,8 +1668,6 @@ body {
     border: 0.5px solid #000;
   }
 
-
-
   .chip-tech {
     flex-direction: row;
     gap: 3vw;
@@ -1777,7 +1745,6 @@ body {
   }
 }
 
-/* Móviles pequeños */
 @media (max-width: 576px) {
 
   /* -----MODAL------- */
@@ -1946,6 +1913,13 @@ body {
     margin-top: 17vh 184.144px;
   }
 
+  .product-name-h1 {
+    font-size: 11vw;
+    top: 3%;
+    left: 1%;
+    white-space: normal;
+  }
+
   .product-image {
     left: 37%;
     top: 11%;
@@ -1959,8 +1933,8 @@ body {
   }
 
   .color-btn-product {
-    width: 8vw;
-    height: 8vw;
+    width: 5vw;
+    height: 5vw;
     border-radius: 50%;
     margin-left: 10px;
     cursor: pointer;
