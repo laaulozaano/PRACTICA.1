@@ -106,6 +106,16 @@ body {
 .navbar-nav .nav-link:hover::after {
   width: 100%;
 }
+ 
+.navbar-toggler {
+    border: none; /* si quieres quitar el borde feo de bootstrap */
+}
+
+.icon-menu {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
 
 /* ----Carrito---- */
 .d-flex a.nav-link {
@@ -1266,6 +1276,17 @@ body {
   .newsletter-section .img-fluid.h-100 {
     height: 100% !important;
   }
+
+  .product-image {
+    position: absolute;
+    top: 6%;
+    left: 44%;
+    transform: translate(-50%, -10%);
+    width: 49vw;
+    max-width: 90vw;
+    z-index: 2;
+    transform: rotate(15deg);
+}
 }
 
 
@@ -1530,7 +1551,23 @@ body {
   .best-sellers {
     height: auto;
   }
+
+  .swiper {
+    height: 46vh;
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: default;
+    animation: bounce 1.5s infinite;
+    font-size: 2.2vw;
 }
+}
+
+
 
 @media (max-width: 820px) {
   .chip-info {
@@ -1558,7 +1595,7 @@ body {
     cursor: default;
     animation: bounce 1.5s infinite;
     font-size: 3.2vw;
-}
+  }
 }
 
 @media (max-width: 768px) {
@@ -1641,10 +1678,10 @@ body {
   .scroll-down {
     font-size: 2.5vw;
   }
-  
+
 
   .h1-product {
-    padding-bottom: 0;
+    padding-bottom: 2vh;
   }
 
   .our-story .col-md-6 {
@@ -1679,7 +1716,7 @@ body {
 
   /* -------PRODUCT------------  */
   .hero-2 {
-    height: 58vh;
+    height: 60vh;
   }
 
   .btn {
@@ -1699,13 +1736,13 @@ body {
 
   .product-options {
     width: 40%;
-    top: calc(var(--title-top, -2vh) + 7vh);
+    top: calc(var(--title-top, -2vh) + 0vh);
     left: 1%;
   }
 
   .price-product {
     font-size: clamp(2.3rem, 3.8vw, 3.6rem);
-    top: 8%;
+    top: 7%;
   }
 
   .color-btn-product {
@@ -1816,7 +1853,7 @@ body {
   .contact-section {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 106vh;
   }
 
   .contact-section .col-lg-8,
@@ -1824,7 +1861,7 @@ body {
     flex: 0 0 100%;
     max-width: 100%;
     justify-content: normal !important;
-    height: 50vh;
+    height: 25vh;
     margin-top: -20vh;
   }
 
@@ -2181,5 +2218,15 @@ body {
 
   .contact-script {
     font-size: 0vw;
+  }
+
+  .filter-toggle i {
+    font-size: 2rem;
+  }
+
+  .filter-toggle {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 5vw;
   }
 }
