@@ -1549,6 +1549,16 @@ body {
     margin-bottom: 0;
     padding-bottom: 2rem;
   }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: default;
+    animation: bounce 1.5s infinite;
+    font-size: 3.2vw;
+}
 }
 
 @media (max-width: 768px) {
@@ -1631,6 +1641,7 @@ body {
   .scroll-down {
     font-size: 2.5vw;
   }
+  
 
   .h1-product {
     padding-bottom: 0;
